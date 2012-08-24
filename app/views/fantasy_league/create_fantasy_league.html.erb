@@ -1,0 +1,46 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Register New League</title>
+	</head>
+	<body>
+		<h2 class="quite">Create a New League</h2>
+		<div align="left">
+			<%= form_for @fantasy_league, :url => { :action => "register_league" } do |f| %>
+			<fieldset>
+				<div class="field">
+					<%= f.label :name %>
+					<br />
+					<%= f.text_field :name %>
+				</div>
+				<div class="field">
+					<%= f.label :type %>
+					<br />
+					<%= f.text_field :league_type %>
+					<% if flash[:error] %>
+					<div class="error">
+						<%= flash[:error] %>
+					</div>
+					<%end%>
+				</div>
+				<div class="field">
+					<%= f.submit "Register League" %>
+				</div>
+
+			</fieldset>
+			<% end %>
+		</div>
+	</body>
+
+</html>
+
+<!--<form action="/register_league" method="POST">
+<fieldset>
+Name: <input type="text" name="fantasy_league[name]" />
+Type: <input type="text" name="fantasy_league[league_type]" />
+<input type="submit" value="Register League" />
+<% if flash[:error] %>
+<p class="alert"><%= flash[:error] %></p>
+<%end%>
+</fieldset>
+</form>-->

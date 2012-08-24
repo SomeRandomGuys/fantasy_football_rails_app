@@ -1,3 +1,10 @@
+GIT
+  remote: git://github.com/ctran/annotate_models.git
+  revision: 98d00635c41c4bfe66b361196241505a5c778b7a
+  specs:
+    annotate (2.5.0)
+      rake
+
 GEM
   remote: http://rubygems.org/
   specs:
@@ -106,6 +113,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  annotate!
   coffee-rails (~> 3.1.1)
   jquery-rails
   json

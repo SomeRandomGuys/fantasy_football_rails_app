@@ -1,14 +1,15 @@
 # == Schema Information
 #
-# Table name: leagues
+# Table name: fantasy_managers
 #
 #  id         :integer          not null, primary key
+#  league_id  :integer
 #  name       :string(255)
-#  code       :string(255)
-#  country    :string(255)
+#  type       :integer
+#  commish    :boolean
 #  created_at :datetime
 #  updated_at :datetime
 #
 
-class League < ActiveRecord::Base
+class FantasyManagers < ActiveRecord::Base
 end

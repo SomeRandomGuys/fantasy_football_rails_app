@@ -1,0 +1,2 @@
+module FantasyLeagueHelper
+end

@@ -24,7 +24,10 @@ FantasyFootball::Application.routes.draw do
   #       get 'sold'
   #     end
   #   end
-
+  root :to => 'home#index'
+  match 'new_league' => 'fantasy_league#create_fantasy_league'
+  match 'list' => 'fantasy_league#list_fantasy_leagues'
+  match 'register_league' => 'fantasy_league#register_league'
   # Sample resource route with sub-resources:
   #   resources :products do
   #     resources :comments, :sales

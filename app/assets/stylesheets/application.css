@@ -3,5 +3,144 @@
  * and any sub-directories. You're free to add application-wide styles to this file and they'll appear at
  * the top of the compiled file, but it's generally better to create a new file per style scope.
  *= require_self
- *= require_tree . 
+ *= require_tree .
+ */
+
+
+#page_body {
+	background: #F2F2F2;
+	margin: 0 0 1em 0;
+	border-radius: 5px;
+	padding: 20px;
+}
+
+.container {
+	
+}
+
+#footer {
+	background: #F2F2F2;
+	border-radius: 5px;
+	padding: 20px;
+}
+
+
+#main_content {
+	float: left;
+}
+
+#header {
+	float: left;
+	border-radius: 5px;
+}
+
+#page_body {
+	float: left;
+	min-height: 400px;
+}
+
+#home_page {
+	height: 400px;
+}
+#filler_div {
+	height: 150px;
+}
+
+#list_page ul {
+	list-style: none;
+}
+
+#fantasy_leagues_list_table {
+	width: 50%;
+}
+
+
+ #navbar {
+ width: 100%;
+ float: left;
+ margin: 0 0 1em 0;
+ padding: 0;
+ list-style: none;
+ background-color: #f2f2f2;
+ border-bottom: 1px solid #ccc;
+ border-top: 1px solid #ccc;
+ }
+
+ #navbar li {
+ float: left;
+ list-style: none;
+ }
+
+ #navbar li a {
+ display: block;
+ padding: 8px 15px;
+ text-decoration: none;
+ font-weight: bold;
+ color: #069;
+ border-right: 1px solid #ccc;
+ }
+
+ #navbar li a:hover {
+ color: #c00;
+ background-color: #fff;
+ }
+
+/*
+#navbar {
+	width: 100%;
+	float: left;
+	margin: 0 0 1em 0;
+	padding: 0;
+	background-color: #f2f2f2;
+	border-bottom: 1px solid #ccc;
+}
+#navbar ul {
+	list-style: none;
+	width: 800px;
+	margin: 0 auto;
+	padding: 0;
+}
+#navbar li {
+	float: left;
+}
+#navbar li a {
+	display: block;
+	padding: 8px 15px;
+	text-decoration: none;
+	font-weight: bold;
+	color: #069;
+	border-right: 1px solid #ccc;
+}
+#navbar li:first-child a {
+	border-left: 1px solid #ccc;
+}
+#navbar li a:hover {
+	color: #c00;
+	background-color: #fff;
+}
 */
+#btn {
+	border: 1px solid #777777;
+	background: #BBBBBB;
+	color: #000000;
+	font-weight: bold;
+	font-size: 13px;
+	padding: 36px;
+	cursor: pointer;
+	-moz-border-radius: 8px;
+	-webkit-border-radius: 8px;
+}
+
+#left_bar {
+	background-color: #205791;
+	height: 400px;
+}
+
+#right_bar {
+	background-color: #205791;
+	height: 400px;
+}
+
+
+
+
