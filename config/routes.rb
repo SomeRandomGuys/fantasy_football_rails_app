@@ -28,6 +28,10 @@ FantasyFootball::Application.routes.draw do
   match 'new_league' => 'fantasy_league#create_fantasy_league'
   match 'list' => 'fantasy_league#list_fantasy_leagues'
   match 'register_league' => 'fantasy_league#register_league'
+  match 'join_league' => 'fantasy_league#join_league'
+  match 'new_manager' => 'fantasy_league#new_manager'
+  match 'list_managers' => 'fantasy_league#list_managers'
+  
   # Sample resource route with sub-resources:
   #   resources :products do
   #     resources :comments, :sales

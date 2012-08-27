@@ -1,38 +1,27 @@
-<!DOCTYPE HTML>
-<html>
-	<head>
-		<title>Register New League</title>
-	</head>
-	<body>
-		<h2 class="quite">Create a New League</h2>
-		<div align="left">
-			<%= form_for @fantasy_league, :url => { :action => "register_league" } do |f| %>
-			<fieldset>
-				<div class="field">
-					<%= f.label :name %>
-					<br />
-					<%= f.text_field :name %>
-				</div>
-				<div class="field">
-					<%= f.label :type %>
-					<br />
-					<%= f.text_field :league_type %>
-					<% if flash[:error] %>
-					<div class="error">
-						<%= flash[:error] %>
-					</div>
-					<%end%>
-				</div>
-				<div class="field">
-					<%= f.submit "Register League" %>
-				</div>
-
-			</fieldset>
-			<% end %>
+<h2 class="quite">Create a New League</h2>
+<div align="left">
+	<%= form_for @fantasy_league, :url => { :action => "register_league" } do |f| %>
+	<fieldset>
+		<div class="field">
+			<%= f.label :name, :class => "field" %><br />
+			<%= f.text_field :name %>
 		</div>
-	</body>
+		<div class="field">
+			<%= f.label :type %><br />
+			<%= collection_select :fantasy_league, :league_type, @fantasy_league_types, :id, :description, :prompt => "Select a type of league" %>
+			<% if flash[:error] %>
+			<div class="error">
+				<%= flash[:error] %>
+			</div>
+			<% end %>
+		</div><br />
+		<div class="field">
+			<%= f.submit "Register League" %>
+		</div>
 
-</html>
+	</fieldset>
+	<% end %>
+</div>
 
 <!--<form action="/register_league" method="POST">
 <fieldset>

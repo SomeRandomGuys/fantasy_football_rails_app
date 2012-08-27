@@ -1,0 +1,24 @@
+<div id="list_page">
+	<h2 class="quite">Managers</h2>
+	<div id="name" align="center">
+
+		<table id="hor-minimalist-b">
+			<thead>
+				<tr>
+					<th>Manager Name</th>
+					<th>League</th>
+					<th>Commish</th>
+				</tr>
+			</thead>
+			<tbody>
+				<% @fantasy_managers.each do |manager| %>
+				<tr>
+					<td> <%= manager.name %> </td>
+					<td> <%= manager.league_name manager.league_id %> <td> <%= manager.commish ? "YES": "NO" %> </td>
+				</tr>
+				<% end %>
+			</tbody>
+		</table>
+	</div>
+</div>
+

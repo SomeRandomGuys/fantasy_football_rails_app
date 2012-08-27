@@ -2,7 +2,7 @@
 	<h2 class="quite">Leagues</h2>
 	<div id="name" align="center">
 	
-	<table id="fantasy_leagues_list_table">
+	<table id="hor-minimalist-b">
 		<thead>
 			<th>League Name</th>
 			<th>League Type</th>
@@ -11,7 +11,7 @@
 			<% @fantasy_leagues.each do |league| %>
 			<tr>
 				<td> <%= league.name %> </td>
-				<td> <%= league.league_type %> </td>
+				<td> <%= league.league_type_description league.league_type %> </td>
 			</tr>
 			<% end %>
 		</tbody>
