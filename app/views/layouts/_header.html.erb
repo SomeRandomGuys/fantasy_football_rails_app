@@ -26,6 +26,12 @@
 			<li>
 				<%= link_to 'Something', '#' %>
 			</li>
+			<% if signed_in? %>
+				<li>
+					<%= link_to 'Sign Out', 'signout' %>
+				</li>
+			<% end %>
 		</ul>
 	</div>
+
 </header>

@@ -10,8 +10,9 @@
 		<%= csrf_meta_tags %>
 	</head>
 	<body class="canvas">
+
 		<div class="container">
-	<!--		<div id="left_bar" class="column span-4">
+			<!--		<div id="left_bar" class="column span-4">
 
 			</div> -->
 			<div id="main_content" class="column span-24 first last">
@@ -19,16 +20,21 @@
 					<%= render 'layouts/header' %>
 				</div>
 				<div id="page_body" class="column span-23 first last">
-					<%= yield %>
+					<% if signed_in? %>
+						<%= yield %>
+					<% else %>
+						<%= render 'sessions/new'%>
+					<% end %>
 				</div>
 				<div id="footer" class="column span-23 first last">
 					<%= render 'layouts/footer' %>
 					<%= debug(params) if Rails.env.development? %>
 				</div>
 			</div>
-		<!--	<div id="right_bar" class="column span-4 last">
+			<!--	<div id="right_bar" class="column span-4 last">
 
-		</div> -->
+			</div> -->
 		</div>
+
 	</body>
 </html>
