@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120824021236) do
+ActiveRecord::Schema.define(:version => 20120909014919) do
 
   create_table "fantasy_league_types", :force => true do |t|
     t.string   "league_type_description"
@@ -31,6 +31,16 @@ ActiveRecord::Schema.define(:version => 20120824021236) do
     t.string   "name"
     t.integer  "type"
     t.boolean  "commish"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "fantasy_teams", :force => true do |t|
+    t.integer  "fantasy_manager_id"
+    t.integer  "player_id"
+    t.boolean  "active_flg"
+    t.datetime "added_on"
+    t.datetime "dropped_on"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -108,6 +118,16 @@ ActiveRecord::Schema.define(:version => 20120824021236) do
     t.string   "city"
     t.datetime "created_at"
     t.datetime "updated_at"
+  end
+
+  create_table "users", :force => true do |t|
+    t.string   "username"
+    t.string   "first_name"
+    t.string   "last_name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "password"
+    t.string   "email"
   end
 
 end
