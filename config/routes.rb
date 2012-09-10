@@ -1,9 +1,11 @@
 FantasyFootball::Application.routes.draw do
   #get "sessions/new"
   resource :sessions, :only => [:new, :create, :destroy]
+  resource :users, :only => [:new, :create]
   
   match '/signin', :to => 'sessions#new'
   match '/signout', :to => 'sessions#destroy'
+  match '/signup', :to => 'users#new'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

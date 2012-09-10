@@ -20,7 +20,7 @@
 					<%= render 'layouts/header' %>
 				</div>
 				<div id="page_body" class="column span-23 first last">
-					<% if signed_in? %>
+					<% if signed_in? || current_page?("/signup")  %>
 						<%= yield %>
 					<% else %>
 						<%= render 'sessions/new'%>

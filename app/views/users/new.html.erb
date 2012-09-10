@@ -1,0 +1,39 @@
+
+<h2>Signup</h2>
+
+<%= form_for(@user, :url => users_path) do |f| %>
+	<div class="field">
+		<%= f.label :username %><br />
+		<%= f.text_field :username %>
+	</div>
+	<div class="field">
+		<%= f.label :password %><br />
+		<%= f.password_field :password %>
+	</div>
+	<div class="field">
+		<%= f.label :password %><br />
+		<%= f.password_field :password %>
+	</div>
+	<div class="field">
+		<%= f.label :first_name %><br />
+		<%= f.text_field :first_name %>
+	</div>
+	<div class="field">
+		<%= f.label :last_name %><br />
+		<%= f.text_field :last_name %>
+	</div>
+	<div class="field">
+		<%= f.label :email %><br />
+		<%= f.text_field :email %>
+	</div>
+	<div class="acions">
+		<%= f.submit "Signup" %>	
+	</div>	
+	<% if flash[:error] %>
+			<div class="error">
+				<%= flash[:error] %>
+			</div>
+			<% end %>
+<% end %>
+<br />
+
