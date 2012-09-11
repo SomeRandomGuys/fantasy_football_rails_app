@@ -52,7 +52,7 @@ class FantasyLeaguesController < ApplicationController
     # @fantasy_league = params[:league_id] ? FantasyLeague.find(params[:league_id]) : FantasyLeague.leagues_for_user_id(current_user_id)
   # end
   
-  def list_managers
-    @fantasy_managers = FantasyManagers.managers_for_user_id(current_user_id)
-  end
+  # def list_managers
+    # @fantasy_managers = FantasyManagers.managers_for_user_id(current_user_id)
+  # end
 end

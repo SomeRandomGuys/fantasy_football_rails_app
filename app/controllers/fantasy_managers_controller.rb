@@ -27,7 +27,8 @@ class FantasyManagersController < ApplicationController
     #@fantasy_league = FantasyLeague.leagues_for_user_id(current_user_id)
   end
 
-# 
-
-
+  def show
+    @fantasy_managers = FantasyManagers.managers_for_user_id(current_user_id)
+  end
+  
 end
