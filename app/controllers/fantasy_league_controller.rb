@@ -1,5 +1,6 @@
 class FantasyLeagueController < ApplicationController
   
+  #include SessionsHelper
   #layout 'standard'
   
   def register_league
@@ -22,10 +23,18 @@ class FantasyLeagueController < ApplicationController
     @fantasy_leagues = FantasyLeague.all
   end
   
-  def new_manager
+  #Create a new fantasy_manager
+  def new_fantasy_manager
     @fantasy_manager = FantasyManagers.new(params[:fantasy_managers])
     @fantasy_manager.commish = params[:commish]
     if @fantasy_manager.save
+      
+      #Associate created fantasy_manager with current user
+      user_fantasy_manager = UserFantasyManager.new
+      user_fantasy_manager.user_id = current_user_id
+      user_fantasy_manager.fantasy_manager_id = FantasyManagers.fantasy_manager_id(params[:fantasy_managers][:league_id], params[:fantasy_managers][:name])
+      user_fantasy_manager.save 
+      
       redirect_to :action => :list_managers
     else
       flash[:error] = "Error joining a league"
@@ -39,6 +48,6 @@ class FantasyLeagueController < ApplicationController
   end
   
   def list_managers
-    @fantasy_managers = FantasyManagers.all
+    @fantasy_managers = FantasyManagers.managers_for_user_id(current_user_id)
   end
 end

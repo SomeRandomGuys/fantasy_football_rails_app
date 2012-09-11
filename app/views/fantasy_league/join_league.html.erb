@@ -1,6 +1,7 @@
 <h2>Join a league</h2>
+<p><%= current_user_id %></p>
 <div>
-	<%= form_for @fantasy_manager, :url => { :action => "new_manager"} do |f| %>
+	<%= form_for @fantasy_manager, :url => { :action => "new_fantasy_manager"} do |f| %>
 	<fieldset>
 		<div class="field">
 			<%= f.label :League %><br />

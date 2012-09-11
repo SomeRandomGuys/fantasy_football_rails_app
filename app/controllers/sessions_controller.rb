@@ -7,7 +7,8 @@ class SessionsController < ApplicationController
     
     if user.nil?
       flash[:error] = "Wrong username/password"
-      render 'new'
+      redirect_to '/'
+      #render :partial => 'new'
     else
       sign_in user
       redirect_to '/'
