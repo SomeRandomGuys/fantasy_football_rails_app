@@ -1,0 +1,38 @@
+<h2>Join a league</h2>
+<div>
+	<%= form_for @fantasy_manager, :url => { :action => "create" } do |f| %>
+	<fieldset>
+		<div class="field">
+			<%= f.label :League %>
+			
+			<% if !@fantasy_league.is_a? FantasyLeague %>
+				<br />
+				<%= collection_select :fantasy_managers, :league_id, @fantasy_league, :id, :name, :prompt => "Select a league to join" %>
+			<% else %>
+				:
+				<%= f.label @fantasy_league.name %>
+			<% end %>
+		</div>
+		<div class="field">
+			<%= f.label :name %>
+			<br />
+			<%= f.text_field :name %>
+		</div>
+		<div class="field">
+			<%= f.label :commish %>
+			<br />
+			<%= check_box_tag :commish %>
+		</div>
+		<div class="msg_div">
+			<% if flash[:error] %>
+			<div class="error">
+				<%= flash[:error] %>
+			</div>
+			<% end %>
+		</div>
+		<div class="field">
+			<%= f.submit "Join League" %>
+		</div>
+	</fieldset>
+	<% end %>
+</div>

@@ -2,6 +2,8 @@ FantasyFootball::Application.routes.draw do
   #get "sessions/new"
   resource :sessions, :only => [:new, :create, :destroy]
   resource :users, :only => [:new, :create]
+  resource :fantasy_league
+  resource :fantasy_manager
   
   match '/signin', :to => 'sessions#new'
   match '/signout', :to => 'sessions#destroy'
@@ -33,13 +35,13 @@ FantasyFootball::Application.routes.draw do
   #     end
   #   end
   root :to => 'home#index'
-  match 'new_league' => 'fantasy_league#create_fantasy_league'
-  match 'list' => 'fantasy_league#list_fantasy_leagues'
-  match 'register_league' => 'fantasy_league#register_league'
-  match 'join_league' => 'fantasy_league#join_league'
-  match 'new_fantasy_manager' => 'fantasy_league#new_fantasy_manager'
-  match 'list_managers' => 'fantasy_league#list_managers'
-  
+  # match 'new_league' => 'fantasy_league#create_fantasy_league'
+  # match 'list' => 'fantasy_league#list_fantasy_leagues'
+  # match 'register_league' => 'fantasy_league#register_league'
+   match 'join_league' => 'fantasy_managers#new'
+  # match 'new_fantasy_manager' => 'fantasy_league#new_fantasy_manager'
+  # match 'list_managers' => 'fantasy_league#list_managers'
+#   
   # Sample resource route with sub-resources:
   #   resources :products do
   #     resources :comments, :sales

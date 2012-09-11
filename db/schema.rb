@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120910004212) do
+ActiveRecord::Schema.define(:version => 20120911045833) do
 
   create_table "fantasy_league_types", :force => true do |t|
     t.string   "league_type_description"
@@ -24,6 +24,7 @@ ActiveRecord::Schema.define(:version => 20120910004212) do
     t.integer  "league_type"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "created_by_user"
   end
 
   create_table "fantasy_managers", :force => true do |t|

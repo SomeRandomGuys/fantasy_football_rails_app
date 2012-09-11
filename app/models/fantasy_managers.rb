@@ -33,4 +33,5 @@ class FantasyManagers < ActiveRecord::Base
       return []
     end
   end
+  
 end
