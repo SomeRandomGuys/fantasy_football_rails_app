@@ -10,6 +10,12 @@ import http_operations
 import stats_parser
 
 
+DEFENCE_POSITIONS = ('DLR', 'DL', 'DC', 'DR', 'DCR')
+FORWARD_POSITIONS = ('FW')
+GOALKEEPER_POSITIONS = ('GK')
+MIDFIELD_POSITIONS = ('M', 'MCL', 'DMC', 'ML', 'MC', 'MR', 'AML', 'AMC', 'AMR', 'AMCLR')
+
+
 def GetPlayerData(uri_list):
   """The orchestrator."""
   player_stats = {}
@@ -38,6 +44,83 @@ def GetPlayerData(uri_list):
   return player_stats
 
 
+def GetStatsPerPosition(player_stats):
+  """Iterate over the player_stats map & list the stats per position.
+
+  Args:
+    player_stats: A dictionary containing all the stats per player.
+
+  Returns:
+    True on success else False.
+  """
+  defence_stats = ()
+  forward_stats = ()
+  goalkeeping_stats = ()
+  midfield_stats = ()
+
+  for key, value in player_stats.iteritems():
+    position = value['position']
+
+    # Get a set of all the stats per generic position.
+    if position in DEFENCE_POSITIONS:
+      defence_stats = _UpdateStats(defence_stats, set(value))
+    elif position in FORWARD_POSITIONS:
+      forward_stats = _UpdateStats(forward_stats, set(value))
+    elif position in GOALKEEPER_POSITIONS:
+      goalkeeping_stats = _UpdateStats(goalkeeping_stats, set(value))
+    elif position in MIDFIELD_POSITIONS:
+      midfield_stats = _UpdateStats(midfield_stats, set(value))
+    else:
+      logging.error('name:%s in position: %s not in list.', value['name'],
+                    position)
+      return False
+
+  # Log all the stats.
+  if (not defence_stats or not forward_stats or not goalkeeping_stats or
+      not midfield_stats):
+    logging.error('Not stats found for all positions. Defence: %s, Forward: %s,'
+                  'Goalkeeping: %s, Midfield: %s', defence_stats, forward_stats,
+                  goalkeeping_stats, midfield_stats)
+    return False
+
+  logging.info('Defence stats: %s, %d', defence_stats, len(defence_stats))
+  logging.info('Foward stats: %s, %d', forward_stats, len(forward_stats))
+  logging.info('Goalkeeping stats: %s, %d', goalkeeping_stats,
+               len(goalkeeping_stats))
+  logging.info('Midfielding stats: %s, %d', midfield_stats,
+               len(midfield_stats))
+
+  return True
+
+
+def PrintParsedPlayers(player_stats_map):
+  """Iterates over the player_stats_map & prints the name & id of the player.
+
+  Args:
+    player_stats_map: A dictionary key'd by the id of the player containing all
+    relevant stats as a second level dictionary.
+  """
+  for key, value in player_stats_map.iteritems():
+    logging.info('team_id: %d, team_name: %s, id: %d, name: %s, position: %s, '
+                 'mins_played: %s', value['team_id'], value['team_name'],
+                 key, value['name'], value['position'], value['mins_played'])
+
+
+def _UpdateStats(stats, player_stats_set):
+  """
+  """
+  if not stats:
+    stats = player_stats_set
+  else:
+    # Get the set intersection.
+    if stats != set(player_stats_set):
+      logging.error('Different stats found for the same general position: %s '
+                    'Unifying stats.', set.difference(stats, player_stats_set))
+      stats = set.union(stats, (player_stats_set))
+
+  return stats
+
+
 def SetupLogger(verbosity):
   """Initialize the root logger."""
   if verbosity:
@@ -63,6 +146,12 @@ def SetupCommandLineFlags():
                       type=str, action='append', help='The list of URI path.')
   parser.add_argument('-v', '--verbose', dest='verbosity', action='store_true',
                       default=False, help='Logging verbosity.')
+  parser.add_argument('--statistics_keys', dest='statistics_keys',
+                      action='store_true', default=False,
+                      help=('Get the union of all statistics for player that '
+                            'played the game per position. We do not consider '
+                            'any stats from substitues that did not get any '
+                            'game time.'))
 
   return parser
 
@@ -77,11 +166,12 @@ def main():
   if not player_stats:
     return False
 
-  for key, value in player_stats.iteritems():
-    logging.info('id: %d, name: %s, position: %s', key, value['name'],
-                 value['position'])
+  # Print out all the players & their positions.
+  PrintParsedPlayers(player_stats)
 
-  return True
+  if args.statistics_keys:
+    if not GetStatsPerPosition(player_stats):
+      return False
 
 
 if __name__ == '__main__':
