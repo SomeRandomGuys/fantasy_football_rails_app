@@ -14,7 +14,7 @@ class FantasyManagersController < ApplicationController
       user_fantasy_manager.fantasy_manager_id = FantasyManagers.fantasy_manager_id(params[:fantasy_managers][:league_id], params[:fantasy_managers][:name])
       user_fantasy_manager.save
 
-      redirect_to :action => :list_managers
+      redirect_to :list_fantasy_managers
     else
       flash[:error] = "Error joining a league"
       redirect_to :join_league
@@ -23,8 +23,11 @@ class FantasyManagersController < ApplicationController
   
   def new
     @fantasy_manager = FantasyManagers.new
-    @fantasy_league = params[:league_id] ? FantasyLeague.find(params[:league_id]) : FantasyLeague.leagues_for_user_id(current_user_id)
-    #@fantasy_league = FantasyLeague.leagues_for_user_id(current_user_id)
+    if params[:league_id].nil?
+      @fantasy_league = FantasyLeague.leagues_for_user_id(current_user_id)
+    else 
+      @fantasy_league = FantasyLeague.leagues_for_user_id_and_league_id(current_user_id, params[:league_id])
+    end
   end
 
   def show

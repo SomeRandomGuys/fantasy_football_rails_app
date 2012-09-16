@@ -14,4 +14,17 @@
 #
 
 class Player < ActiveRecord::Base
+  
+  belongs_to :team
+  belongs_to :position
+  
+  def self.players_view(team_id='%', position_id='%')
+    if team_id == "" or team_id.nil?
+        team_id = '%'
+    end
+    if position_id == "" or position_id.nil?
+      position_id = '%'
+    end
+    joins(:team, :position).where("players.team_id LIKE ? and players.position_id LIKE ?", team_id, position_id).includes(:team, :position)
+  end
 end

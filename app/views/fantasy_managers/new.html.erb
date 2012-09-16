@@ -5,10 +5,10 @@
 		<div class="field">
 			<%= f.label :League %>
 			
-			<% if !@fantasy_league.is_a? FantasyLeague %>
+			<% if @fantasy_league.is_a? Array %>
 				<br />
 				<%= collection_select :fantasy_managers, :league_id, @fantasy_league, :id, :name, :prompt => "Select a league to join" %>
-			<% else %>
+			<% elsif @fantasy_league.is_a? FantasyLeague %>
 				:
 				<%= f.label @fantasy_league.name %>
 			<% end %>

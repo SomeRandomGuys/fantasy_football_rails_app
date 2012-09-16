@@ -1,0 +1,47 @@
+<div id="list_page">
+	<h2 class="quite">Players</h2>
+	<div id="name" align="center">
+	
+	<table id="hor-minimalist-b">
+		<thead>
+			<tr>
+				<td></td>
+				<td>
+					<%= form_for :players, :url => { :action => 'create' } do |f| %>
+						<%= collection_select :team, :team_id, @teams, :id, :name, { :prompt =>  "All" } %>
+				</td>
+				<td>
+						<%= collection_select :position, :position_id, @positions, :id, :code, { :prompt =>  "All" } %>
+
+				</td>
+				<td>
+						<%= f.submit "Filter" %>
+					<% end %>
+				</td>
+			</tr>
+			<th>Name</th>
+				<th>Team</th>
+				<th>Position</th>
+				<th>Age</th>
+			</tr>
+		</thead>
+		<tbody>
+			<% if @players.respond_to? 'each' %>
+			<% @players.each do |player| %>
+			<tr>
+				<td> <%= player.first_name %> <%= player.last_name %> </td>
+				<td> <%= player.country %> </td>
+				<td> <%= player.position[:code] %> </td>
+				<td> <%= player.age %> </td>
+			</tr>
+			<% end %>
+			
+			<% else %>
+				<td> <%= @players.first_name %> <%= @players.last_name %></td>
+				<td> <%= @players.country %> </td>
+				<td> <%= @players.age %> </td>
+			<% end %>
+		</tbody>
+	</table>
+	</div>
+</div>
