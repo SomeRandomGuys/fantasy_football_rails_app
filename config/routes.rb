@@ -4,11 +4,14 @@ FantasyFootball::Application.routes.draw do
   resource :users, :only => [:new, :create]
   resource :fantasy_league
   resource :fantasy_manager
+  resource :fantasy_team
   resource :player
   
   match '/signin', :to => 'sessions#new'
   match '/signout', :to => 'sessions#destroy'
   match '/signup', :to => 'users#new'
+  match '/drop_player', :to => 'fantasy_teams#drop_player'
+  # match '/show_fantasy_team', :to => 'fantasy_managers#show_fantasy_team'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

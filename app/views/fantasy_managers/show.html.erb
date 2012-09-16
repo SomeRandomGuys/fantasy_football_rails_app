@@ -13,7 +13,7 @@
 			<tbody>
 				<% @fantasy_managers.each do |manager| %>
 				<tr>
-					<td> <%= manager.name %> </td>
+					<td> <%= link_to manager.name, :controller => 'fantasy_teams', :action => 'show', :id => manager.league_id %> </td>
 					<td> <%= manager.league_name manager.league_id %> <td> <%= manager.commish ? "YES": "NO" %> </td>
 				</tr>
 				<% end %>

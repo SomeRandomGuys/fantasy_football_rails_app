@@ -1,0 +1,25 @@
+<div id="list_page">
+	<h2 class="quite">Fantasy Team</h2>
+	<div id="name" align="center">
+
+		<table id="hor-minimalist-b">
+			<thead>
+				<tr>
+					<th>Player</th>
+					<th>Position</th>
+					<th>Drop</th>
+				</tr>
+			</thead>
+			<tbody>
+				<% @fantasy_team.each do |player| %>
+				<tr>
+					<td> <%= player.player.first_name %> <%=  player.player.last_name %></td>
+					<td> <%= player.position %> </td>
+					<td> <%= link_to "Drop", :controller => "fantasy_teams", :action => 'drop_player', :id => player.player.id %></td>
+				</tr>
+				<% end %>
+			</tbody>
+		</table>
+	</div>
+</div>
+

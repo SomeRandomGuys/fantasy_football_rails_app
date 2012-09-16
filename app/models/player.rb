@@ -17,6 +17,7 @@ class Player < ActiveRecord::Base
   
   belongs_to :team
   belongs_to :position
+  belongs_to :fantasy_team
   
   def self.players_view(team_id='%', position_id='%')
     if team_id == "" or team_id.nil?

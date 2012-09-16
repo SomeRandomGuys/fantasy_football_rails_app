@@ -34,4 +34,5 @@ class FantasyManagersController < ApplicationController
     @fantasy_managers = FantasyManagers.managers_for_user_id(current_user_id)
   end
   
+
 end
