@@ -121,11 +121,6 @@ ActiveRecord::Schema.define(:version => 20120915221155) do
     t.datetime "updated_at"
   end
 
-  create_table "temp", :id => false, :force => true do |t|
-    t.string "team_id"
-    t.string "team_code"
-  end
-
   create_table "user_fantasy_managers", :force => true do |t|
     t.integer  "user_id"
     t.integer  "fantasy_manager_id"
