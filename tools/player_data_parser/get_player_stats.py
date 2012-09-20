@@ -5,20 +5,23 @@ __author__ = 'akshaylal@gmail.com'
 
 import argparse
 import logging
+import sys
 
 import http_operations
 import stats_parser
 
 
-DEFENCE_POSITIONS = ('DLR', 'DL', 'DC', 'DR', 'DCR')
+DEFENSE_POSITIONS = ('DLR', 'DL', 'DC', 'DR', 'DCR')
 FORWARD_POSITIONS = ('FW')
 GOALKEEPER_POSITIONS = ('GK')
-MIDFIELD_POSITIONS = ('M', 'MCL', 'DMC', 'ML', 'MC', 'MR', 'AML', 'AMC', 'AMR', 'AMCLR')
+MIDFIELD_POSITIONS = ('M', 'MCL', 'DMC', 'ML', 'MC', 'MR', 'AML', 'AMC', 'AMR',
+                      'AMCLR')
 
 
 def GetPlayerData(uri_list):
   """The orchestrator."""
-  player_stats = {}
+  stats_parser_obj = stats_parser.PlayerDataParser()
+  player_data = {}
 
   for uri in uri_list:
     http_obj = http_operations.HTTPOperations(uri)
@@ -27,21 +30,12 @@ def GetPlayerData(uri_list):
       return False
     http_obj.Cleanup()
 
-    stats_parser_obj = stats_parser.PlayerDataParser(html_data)
-    if not stats_parser_obj.ParsePlayerData():
+    stats_parser_obj.Reset()
+    if not stats_parser_obj.ParsePlayerData(html_data):
       return False
+    player_data.update(stats_parser_obj.player_stats_map)
 
-    # Update the values for the player stats, but first ensure that we don't
-    # have duplicate keys (player ids).
-    for key, value in stats_parser_obj.player_stats_map.iteritems():
-      if key in player_stats:
-        logging.error('Duplicate key: %s found in player_stats map: %s',
-                      key, player_stats)
-        return False
-
-      player_stats[key] = value
-
-  return player_stats
+  return player_data
 
 
 def GetStatsPerPosition(player_stats):
@@ -53,17 +47,18 @@ def GetStatsPerPosition(player_stats):
   Returns:
     True on success else False.
   """
-  defence_stats = ()
+  defense_stats = ()
   forward_stats = ()
   goalkeeping_stats = ()
   midfield_stats = ()
 
   for key, value in player_stats.iteritems():
+    # Lets ignore all stats for players who don't fall into our preset buckets.
     position = value['position']
 
     # Get a set of all the stats per generic position.
-    if position in DEFENCE_POSITIONS:
-      defence_stats = _UpdateStats(defence_stats, set(value))
+    if position in DEFENSE_POSITIONS:
+      defense_stats = _UpdateStats(defense_stats, set(value))
     elif position in FORWARD_POSITIONS:
       forward_stats = _UpdateStats(forward_stats, set(value))
     elif position in GOALKEEPER_POSITIONS:
@@ -71,19 +66,17 @@ def GetStatsPerPosition(player_stats):
     elif position in MIDFIELD_POSITIONS:
       midfield_stats = _UpdateStats(midfield_stats, set(value))
     else:
-      logging.error('name:%s in position: %s not in list.', value['name'],
-                    position)
-      return False
+      logging.debug('name:%s in position: %s not in list.',
+                    value['player_name'], position)
+      continue
 
   # Log all the stats.
-  if (not defence_stats or not forward_stats or not goalkeeping_stats or
+  if (not defense_stats or not forward_stats or not goalkeeping_stats or
       not midfield_stats):
-    logging.error('Not stats found for all positions. Defence: %s, Forward: %s,'
-                  'Goalkeeping: %s, Midfield: %s', defence_stats, forward_stats,
-                  goalkeeping_stats, midfield_stats)
+    logging.error('Not stats found for all positions.')
     return False
 
-  logging.info('Defence stats: %s, %d', defence_stats, len(defence_stats))
+  logging.info('Defense stats: %s, %d', defense_stats, len(defense_stats))
   logging.info('Foward stats: %s, %d', forward_stats, len(forward_stats))
   logging.info('Goalkeeping stats: %s, %d', goalkeeping_stats,
                len(goalkeeping_stats))
@@ -100,10 +93,11 @@ def PrintParsedPlayers(player_stats_map):
     player_stats_map: A dictionary key'd by the id of the player containing all
     relevant stats as a second level dictionary.
   """
-  for key, value in player_stats_map.iteritems():
-    logging.info('team_id: %d, team_name: %s, id: %d, name: %s, position: %s, '
-                 'mins_played: %s', value['team_id'], value['team_name'],
-                 key, value['name'], value['position'], value['mins_played'])
+  for _, value in player_stats_map.iteritems():
+    logging.info('team_id: %s, team_name: %s, player_id: %s, player_name: %s, '
+                 'position: %s, mins_played: %s', value['team_id'],
+                 value['team_name'], value['player_id'], value['player_name'],
+                 value['position'], value['mins_played'])
 
 
 def _UpdateStats(stats, player_stats_set):
@@ -114,7 +108,7 @@ def _UpdateStats(stats, player_stats_set):
   else:
     # Get the set intersection.
     if stats != set(player_stats_set):
-      logging.error('Different stats found for the same general position: %s '
+      logging.debug('Different stats found for the same general position: %s '
                     'Unifying stats.', set.difference(stats, player_stats_set))
       stats = set.union(stats, (player_stats_set))
 
@@ -162,17 +156,19 @@ def main():
 
   SetupLogger(args.verbosity)
 
-  player_stats = GetPlayerData(args.uri_list)
-  if not player_stats:
+  player_stats_map = GetPlayerData(args.uri_list)
+  if not player_stats_map:
     return False
 
   # Print out all the players & their positions.
-  PrintParsedPlayers(player_stats)
+  PrintParsedPlayers(player_stats_map)
 
   if args.statistics_keys:
-    if not GetStatsPerPosition(player_stats):
+    if not GetStatsPerPosition(player_stats_map):
       return False
+
+  return True
 
 
 if __name__ == '__main__':
-  main()
+  sys.exit(not main())
