@@ -6,6 +6,7 @@ class FantasyManagersController < ApplicationController
   def create
     @fantasy_manager = FantasyManagers.new(params[:fantasy_managers])
     @fantasy_manager.commish = params[:commish]
+    @title = 'fantasy_teams'
     if @fantasy_manager.save
 
       #Associate created fantasy_manager with current user
@@ -23,6 +24,7 @@ class FantasyManagersController < ApplicationController
   
   def new
     @fantasy_manager = FantasyManagers.new
+    @title = 'fantasy_teams'
     if params[:league_id].nil?
       @fantasy_league = FantasyLeague.leagues_for_user_id(current_user_id)
     else 
@@ -32,6 +34,7 @@ class FantasyManagersController < ApplicationController
 
   def show
     @fantasy_managers = FantasyManagers.managers_for_user_id(current_user_id)
+    @title = 'fantasy_teams'
   end
   
 

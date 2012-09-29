@@ -20,6 +20,7 @@ class FantasyLeaguesController < ApplicationController
   # def list_fantasy_leagues
   def show
     @fantasy_leagues = FantasyLeague.leagues_for_user_id(current_user_id)
+    @title = 'fantasy_leagues'
   end
   
   #Create a new fantasy_manager

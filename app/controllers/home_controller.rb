@@ -5,5 +5,6 @@ class HomeController < ApplicationController
   def index
     #render :action => "index"
     #signin_required = true
+    @title = 'home'
   end
 end

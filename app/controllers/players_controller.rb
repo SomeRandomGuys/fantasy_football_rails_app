@@ -7,12 +7,14 @@ class PlayersController < ApplicationController
     @players = Player.players_view
     @teams = Team.order("name")
     @positions = Position.all
+    @title = 'players'
   end
   
   def create
     @players = Player.players_view(params[:team][:team_id], params[:position][:position_id])
     @teams = Team.order("name")
     @positions = Position.all
+    @title = 'players'
     render :show
   end
   
