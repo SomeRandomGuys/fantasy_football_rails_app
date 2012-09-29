@@ -2,19 +2,39 @@
 	<div id="navbar">
 		<ul>
 			<li>
-				<%= link_to 'Home', root_path %>
+				<% if @title == 'home' %>
+					<%= link_to 'Home', '#', :class => 'current' %>
+				<% else %>
+					<%= link_to 'Home', root_path %>
+				<% end %>
 			</li>
 			<li>
-				<%= link_to 'My Leagues', fantasy_league_path %>
+				<% if @title == 'fantasy_leagues' %>
+					<%= link_to 'My Leagues', '#', :class => 'current' %>
+				<% else %>
+					<%= link_to 'My Leagues', fantasy_league_path %>
+				<% end %>
 			</li>
 			<li>
-				<%= link_to 'My Teams', fantasy_manager_path %>
+				<% if @title == 'fantasy_teams' %>
+					<%= link_to 'My Teams', '#', :class => 'current' %>
+				<% else %>
+					<%= link_to 'My Teams', fantasy_manager_path %>
+				<% end %>
 			</li>
 			<li>
-				<%= link_to 'Scores', '#' %>
+				<% if @title == 'scores' %>
+					<%= link_to 'Scores', '#', :class => 'current' %>
+				<% else %>
+					<%= link_to 'Scores', '#' %>
+				<% end %>
 			</li>
 			<li>
-				<%= link_to 'Players', player_path %>
+				<% if @title == 'players' %>
+					<%= link_to 'Players', '#', :class => 'current' %>
+				<% else %>
+					<%= link_to 'Players', player_path %>
+				<% end %>
 			</li>
 			
 			<li>

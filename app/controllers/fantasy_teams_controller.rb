@@ -2,6 +2,7 @@ class FantasyTeamsController < ApplicationController
 
   def show
     @fantasy_team = FantasyTeam.fantasy_team_by_manager_id(params[:id])
+    @title = 'fantasy_teams'
   end
   
   def drop_player

@@ -11,9 +11,13 @@
 	margin: 0 0 1em 0;
 	border-radius: 5px;
 	padding: 20px;
+	font-family: 'Open Sans', sans-serif;
 }
 
-.container {
+.container {} 
+
+.canvas {
+	background: #A9F5BC;
 
 }
 
@@ -21,10 +25,13 @@
 	background: #F2F2F2;
 	border-radius: 5px;
 	padding: 20px;
+	box-shadow: 5px 5px 20px 2px #0B3B17;
+	margin-bottom: 30px;
 }
 
 #main_content {
 	float: left;
+	
 }
 
 #header {
@@ -35,6 +42,7 @@
 #page_body {
 	float: left;
 	min-height: 400px;
+	box-shadow: 10px 10px 40px 4px #0B3B17;
 }
 
 #home_page {
@@ -52,16 +60,23 @@
 	width: 50%;
 }
 
+
 #navbar {
 	width: 100%;
 	float: left;
 	margin: 0 0 1em 0;
 	padding: 0;
 	list-style: none;
-	background-color: #f2f2f2;
-	border-bottom: 1px solid #ccc;
-	border-top: 1px solid #ccc;
+	background-color: #0A2A12;
+	border-left: 1px solid #0B3B17;
+	border-right: 1px solid #0B3B17;
+	border-bottom: 0px solid #fff;
+	border-radius: 10px 10px 0 0;
+	/*border-top: 1px solid #ccc;
+	padding: 0 20px;*/
+	box-shadow: 5px 5px 20px 0px #0B3B17;
 }
+
 
 #navbar li {
 	float: left;
@@ -70,15 +85,22 @@
 
 #navbar li a {
 	display: block;
-	padding: 8px 15px;
+	padding: 10px 13px 10px 13px;
 	text-decoration: none;
 	font-weight: bold;
-	color: #069;
+	font-size: 13px;
+	font-family: 'Open Sans', sans-serif;
+	color: #fff;
 	border-right: 1px solid #ccc;
 }
 
 #navbar li a:hover {
 	color: #c00;
+	background-color: #fff;
+}
+
+#navbar li .current {
+	color: #0B3B17;
 	background-color: #fff;
 }
 
@@ -156,7 +178,7 @@
 	color: #FFFFFF;
 	border-bottom: 2px solid #6678b1;
 	padding: 10px 8px;
-	background: #000000;
+	background: #0A2A12;
 }
 #hor-minimalist-b tr:nth-child(even) td {
 	background: #F2F2F2;
