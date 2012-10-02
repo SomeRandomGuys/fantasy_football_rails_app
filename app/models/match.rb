@@ -13,4 +13,8 @@
 #
 
 class Match < ActiveRecord::Base
+  validates :home_team_id, :presence => true
+  validates :away_team_id, :presence => true
+  validates :home_score, :presence => true
+  validates :away_score, :presence => true
 end

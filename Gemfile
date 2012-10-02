@@ -23,8 +23,10 @@ group :development do
 #  gem 'sqlite3'
   gem 'pg'
   gem 'annotate', :git => 'git://github.com/ctran/annotate_models.git'
+  #gem 'redcarpet'
 end
 
+gem 'apipie-rails'
 gem 'jquery-rails'
 
 # To use ActiveModel has_secure_password

@@ -1,4 +1,7 @@
 FantasyFootball::Application.routes.draw do
+  
+  apipie
+  
   #get "sessions/new"
   resource :sessions, :only => [:new, :create, :destroy]
   resource :users, :only => [:new, :create]
@@ -7,6 +10,20 @@ FantasyFootball::Application.routes.draw do
   resource :fantasy_team
   resource :player
   
+  ######## Write Stats API ########
+  resources :api do
+    collection do
+      get 'show'
+      post 'new_match'
+      post 'match_team_stats'
+      post 'match_player_stats'
+    end
+  end
+  resources :match
+  resources :match_player_stats
+  resources :match_team_stats
+
+  #################################
   match '/signin', :to => 'sessions#new'
   match '/signout', :to => 'sessions#destroy'
   match '/signup', :to => 'users#new'
