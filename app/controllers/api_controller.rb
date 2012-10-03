@@ -1,6 +1,6 @@
 class ApiController < ApplicationController
   
-  respond_to :json
+  respond_to :json, :xml
   
   resource_description do
     name 'Read and Write Match Stats'
@@ -26,13 +26,13 @@ class ApiController < ApplicationController
   end
   
   api :POST, "/new_match", "Write a new match"
-  param :home_team_id, String, :desc => "team_id of the home team", :required => true
-  param :away_team_id, String, :desc => "team_id of the away team", :required => true
-  param :home_score, String, :desc => "Final score of the home team", :required => true
-  param :away_score, String, :desc => "Final score of the away team", :required => true
-  param :start_time, String, :desc => "Match start date time", :required => false
+  param :home_team_id, String, :desc => "team_id of the home team. This is Required"
+  param :away_team_id, String, :desc => "team_id of the away team. This is Required"
+  param :home_score, String, :desc => "Final score of the home team. This is Required"
+  param :away_score, String, :desc => "Final score of the away team. This is Required"
+  param :start_time, String, :desc => "Match start date time. This is Required"
   description "Use this method to create an entry for a match. A match entry has to be created before writing player stats"
-  example 'POST \'/api/match_team_stats.json\'
+  example 'POST \'/api/new_match.json\'
     CONTENT-TYPE: application/json 
     {"new_match":{"home_team_id":"2", "away_team_id":"3", "home_score":"3", "away_score":"1"}}'
   def new_match
