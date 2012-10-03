@@ -1,6 +1,6 @@
 class ApiController < ApplicationController
   
-  force_ssl
+  #force_ssl
   before_filter :authenticate
   respond_to :json, :xml
   
