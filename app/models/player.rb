@@ -28,4 +28,15 @@ class Player < ActiveRecord::Base
     end
     joins(:team, :position).where("players.team_id LIKE ? and players.position_id LIKE ?", team_id, position_id).includes(:team, :position)
   end
+  
+  def self.find_by_name_and_team(first_name, last_name, team)
+    team = Team.find_by_name(team)
+    # player = where("first_name = ? AND last_name = ? AND team_id = ?", first_name, last_name, team.id).limit(1) unless team.nil?
+    player = where("first_name = ? AND last_name = ?", first_name, last_name).limit(1) unless team.nil?
+    if player.nil? || player.size == 0
+      nil
+    else
+      player[0]
+    end
+  end
 end

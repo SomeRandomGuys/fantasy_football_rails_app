@@ -24,4 +24,23 @@
 #
 
 class MatchPlayerStats < ActiveRecord::Base
+  #validates :shots, :presence => true
 end
+
+
+# mins_played
+# 
+# 
+# goals_allowed / clean_sheet
+# tackles_fail (might not be used)
+# tackles_successful
+# passes_fail/passes_lost
+# passess_successful
+# 
+# shots_off_target
+# shots_saved
+# 
+# penalty_missed
+# penalty_saved
+# who_scored_rating (could be used for error correction - extra credit)
+# dribbles_lost
