@@ -19,10 +19,11 @@ group :assets do
   gem 'uglifier', '>= 1.0.3'
 end
 
-group :development do
+group :development, :test do
 #  gem 'sqlite3'
   gem 'pg'
   gem 'annotate', :git => 'git://github.com/ctran/annotate_models.git'
+  gem 'rspec-rails'
   #gem 'redcarpet'
 end
 
