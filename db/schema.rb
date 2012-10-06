@@ -1,3 +1,4 @@
+# encoding: UTF-8
 # This file is auto-generated from the current state of the database. Instead
 # of editing this file, please use the migrations feature of Active Record to
 # incrementally modify your database, and then regenerate this schema definition.
@@ -10,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120915221155) do
+ActiveRecord::Schema.define(:version => 20121006083007) do
 
   create_table "fantasy_league_types", :force => true do |t|
     t.string   "league_type_description"
@@ -28,10 +29,36 @@ ActiveRecord::Schema.define(:version => 20120915221155) do
   end
 
   create_table "fantasy_managers", :force => true do |t|
-    t.integer  "league_id"
+    t.integer  "fantasy_league_id"
     t.string   "name"
     t.integer  "type"
     t.boolean  "commish"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "fantasy_score_multipliers", :force => true do |t|
+    t.integer  "fantasy_league_id"
+    t.integer  "position_id"
+    t.decimal  "mins_played"
+    t.decimal  "goals_scored"
+    t.decimal  "goals_allowed"
+    t.decimal  "goal_assists"
+    t.decimal  "own_goals"
+    t.decimal  "red_card_count"
+    t.decimal  "yellow_card_count"
+    t.decimal  "tackles_fail"
+    t.decimal  "tackles_successful"
+    t.decimal  "passes_fail"
+    t.decimal  "passess_successful"
+    t.decimal  "shots_on_target"
+    t.decimal  "shots_off_target"
+    t.decimal  "shots_saved"
+    t.decimal  "penalty_scored"
+    t.decimal  "penalty_missed"
+    t.decimal  "penalty_saved"
+    t.decimal  "dribbles_lost"
+    t.decimal  "who_scored_rating"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -42,6 +69,30 @@ ActiveRecord::Schema.define(:version => 20120915221155) do
     t.boolean  "active_flg"
     t.datetime "added_on"
     t.datetime "dropped_on"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "fantasy_weekly_matchups", :force => true do |t|
+    t.integer  "fantasy_league_id"
+    t.integer  "fantasy_home_team_id"
+    t.integer  "fantasy_away_team_id"
+    t.integer  "game_week_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "fantasy_weekly_scores", :force => true do |t|
+    t.integer  "fantasy_team_id"
+    t.integer  "player_id"
+    t.integer  "game_week_id"
+    t.decimal  "total_score"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "game_weeks", :force => true do |t|
+    t.datetime "game_week_deadline"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

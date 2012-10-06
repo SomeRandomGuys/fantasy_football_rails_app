@@ -2,13 +2,13 @@
 #
 # Table name: fantasy_managers
 #
-#  id         :integer          not null, primary key
-#  league_id  :integer
-#  name       :string(255)
-#  type       :integer
-#  commish    :boolean
-#  created_at :datetime
-#  updated_at :datetime
+#  id                :integer          not null, primary key
+#  fantasy_league_id :integer
+#  name              :string(255)
+#  type              :integer
+#  commish           :boolean
+#  created_at        :datetime
+#  updated_at        :datetime
 #
 
 class FantasyManagers < ActiveRecord::Base
@@ -23,7 +23,7 @@ class FantasyManagers < ActiveRecord::Base
   
   def self.fantasy_manager_id(fantasy_league_id, manager_name)
     #return find(id).league_id
-    where("league_id = ? AND name = ?", fantasy_league_id, manager_name).limit(1)[0].id
+    where("fantasy_league_id = ? AND name = ?", fantasy_league_id, manager_name).limit(1)[0].id
   end
   
   def self.managers_for_user_id(user_id)

@@ -25,6 +25,13 @@
 
 class MatchPlayerStats < ActiveRecord::Base
   #validates :shots, :presence => true
+  
+  # has_many :match, :player
+  
+  def self.weekly_player_stats(player_id, gameweek = GameWeeks.current_gameweek)
+    matche_ids = Match.select(:id).matches_in_current_gameweek
+    where(:player_id => player_id, :match_id => match_ids) 
+  end
 end
 
 

@@ -25,4 +25,8 @@ class FantasyTeam < ActiveRecord::Base
            
     @fantasy_team = find_by_sql(sql)
   end
+  
+  def fantasy_league_id
+    FantasyManager.find(self.fantasy_manager_id).fantasy_league_id
+  end
 end
