@@ -1,7 +1,34 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rake db:seed (or created alongside the db with db:setup).
-#
-# Examples:
-#
-#   cities = City.create([{ :name => 'Chicago' }, { :name => 'Copenhagen' }])
-#   Mayor.create(:name => 'Emanuel', :city => cities.first)
+TEAMS_FILE = "#{Rails.root}/db/teams.txt"
+PLAYERS_FILE = "#{Rails.root}/db/players.txt"
+
+# Leagues
+League.delete_all
+League.create({ :name => "English Premier League", :code => "EPL", :country => "England" })
+
+# Field Positions
+Position.delete_all
+Position.create([{:position => "Midfielder", :field_position => "Midfield", :code => "MF"},
+                             {:position => "Forward", :field_position => "Forward", :code => "FW"},
+                             {:position => "Defender", :field_position => "Defence", :code => "DF"},
+                             {:position => "Goalkeeper", :field_position => "Goalkeeper", :code => "GK"}]) 
+
+# EPL Teams
+Team.delete_all
+open(TEAMS_FILE) do |teams|
+  teams.read.each_line do |team|
+    name = team.chomp
+    league_id = League.where(:code => "EPL").first.id
+    Team.create({ :name => name, :league_id => league_id })
+  end
+end
+
+# EPL Players
+Player.delete_all
+open(PLAYERS_FILE) do |players|
+  players.read.each_line do |player|
+    first_name, last_name, position, team, age = player.chomp.split("|")
+    position_id = Position.where(:position => position).first.id
+    team_id = Team.where(:name => team).first.id
+    Player.create({ :first_name => first_name, :last_name => last_name, :position_id => position_id, :team_id => team_id, :age => age }) 
+  end
+end
