@@ -32,3 +32,7 @@ open(PLAYERS_FILE) do |players|
     Player.create({ :first_name => first_name, :last_name => last_name, :position_id => position_id, :team_id => team_id, :age => age }) 
   end
 end
+
+# Fantasy League Types
+FantasyLeagueType.delete_all
+FantasyLeagueType.create({ :league_type_description => "Head to Head", :league_type_code => "H2H" })
