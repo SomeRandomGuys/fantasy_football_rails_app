@@ -20,10 +20,13 @@ group :assets do
 end
 
 group :development, :test do
-#  gem 'sqlite3'
+  # gem 'sqlite3'
   gem 'pg'
   gem 'annotate', :git => 'git://github.com/ctran/annotate_models.git'
   gem 'rspec-rails'
+  gem 'factory_girl_rails', '~> 4.0'
+  gem 'rb-fsevent', :require => false
+  gem 'guard-rspec'
   #gem 'redcarpet'
 end
 

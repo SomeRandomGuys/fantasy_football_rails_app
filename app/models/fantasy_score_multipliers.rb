@@ -29,4 +29,6 @@
 #
 
 class FantasyScoreMultipliers < ActiveRecord::Base
+  has_many :positions
+  has_many :fantasy_leagues
 end
