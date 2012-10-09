@@ -1,21 +1,22 @@
 == Welcome to The Real Fantasy Football
 
-Dependencies
+- Dependencies
 
 1. Ruby 1.9.3 
 	Download here: http://ftp.ruby-lang.org/pub/ruby/1.9/ruby-1.9.3-p194.tar.gz
-				OR
+	OR
 	sudo port install ruby19
 	
 2. RubyGems
 	Download here: http://rubyforge.org/frs/?group_id=126
-				OR
+	OR
 	sudo port install rb-rubygems
 	
 3. Bundler
 	sudo gem install bundler
 	
-Initial setup
+
+- Initial setup
 
 1. Clone this project
 	git clone git@github.com:SomeRandomGuys/fantasy_football_rails_app.git
@@ -35,7 +36,8 @@ Initial setup
 5. Now you should have a running rails instance (APIs and the web app)
 	http://localhost:3000/apidoc
 	
-Use the following links for more information
+	
+- Moar Information
 
 * The Getting Started Guide: http://guides.rubyonrails.org/getting_started.html
 * Ruby on Rails Tutorial Book: http://www.railstutorial.org/
