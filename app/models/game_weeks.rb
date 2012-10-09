@@ -11,7 +11,7 @@
 class GameWeeks < ActiveRecord::Base
   
   def self.current_gameweek
-    where("game_week_deadline < ?", Date.today).order(:game_week_deadline).last
+    self.order(:game_week_deadline).where("game_week_deadline <= ?", Date.today).last
   end
   
   def self.next_gameweek

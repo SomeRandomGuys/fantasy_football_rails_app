@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121006083007) do
+ActiveRecord::Schema.define(:version => 20121007063641) do
 
   create_table "fantasy_league_types", :force => true do |t|
     t.string   "league_type_description"
@@ -108,22 +108,27 @@ ActiveRecord::Schema.define(:version => 20121006083007) do
   create_table "match_player_stats", :force => true do |t|
     t.integer  "match_id"
     t.integer  "player_id"
-    t.boolean  "started"
-    t.integer  "goals"
-    t.integer  "own_goals"
-    t.integer  "assists"
-    t.integer  "yellow_cards"
-    t.integer  "red_cards"
-    t.integer  "saves"
-    t.integer  "playing_time"
-    t.integer  "shots"
-    t.integer  "shots_on_target"
-    t.integer  "penalties_taken"
-    t.integer  "penalties_scored"
-    t.integer  "penalties_saved"
-    t.integer  "position_played"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.decimal  "mins_played"
+    t.decimal  "goals_scored"
+    t.decimal  "goals_allowed"
+    t.decimal  "goal_assists"
+    t.decimal  "own_goals"
+    t.decimal  "red_card_count"
+    t.decimal  "yellow_card_count"
+    t.decimal  "tackles_fail"
+    t.decimal  "tackles_successful"
+    t.decimal  "passes_fail"
+    t.decimal  "passess_successful"
+    t.decimal  "shots_on_target"
+    t.decimal  "shots_off_target"
+    t.decimal  "shots_saved"
+    t.decimal  "penalty_scored"
+    t.decimal  "penalty_missed"
+    t.decimal  "penalty_saved"
+    t.decimal  "dribbles_lost"
+    t.decimal  "who_scored_rating"
   end
 
   create_table "match_team_stats", :force => true do |t|

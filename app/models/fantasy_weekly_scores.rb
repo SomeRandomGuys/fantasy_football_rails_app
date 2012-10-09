@@ -13,6 +13,8 @@
 
 class FantasyWeeklyScores < ActiveRecord::Base
   
+  has_many :fantasy_teams
+  
   def self.update_weekly_scores
     fantasy_players = self.where("game_week_id = ? AND total_score is NULL", GameWeeks.current_gameweek.id)
     fantasy_players.each do |player|
