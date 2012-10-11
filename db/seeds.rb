@@ -26,10 +26,13 @@ end
 Player.delete_all
 open(PLAYERS_FILE) do |players|
   players.read.each_line do |player|
-    first_name, last_name, position, team, age = player.chomp.split("|")
+    first_name, last_name, position, team, age, date = player.chomp.split("|")
+    date = /\/Date\((\d+)\)/.match(date)
+    date_of_birth = Time.at(date[1].to_i/1000)
     position_id = Position.where(:position => position).first.id
     team_id = Team.where(:name => team).first.id
-    Player.create({ :first_name => first_name, :last_name => last_name, :position_id => position_id, :team_id => team_id, :age => age }) 
+    Player.create({ :first_name => first_name, :last_name => last_name, :position_id => position_id,
+                    :team_id => team_id, :age => age, :date_of_birth => date_of_birth }) 
   end
 end
 

@@ -5,7 +5,7 @@
 #  id           :integer          not null, primary key
 #  home_team_id :integer
 #  away_team_id :integer
-#  start_time   :datetime
+#  match_date   :datetime
 #  home_score   :integer
 #  away_score   :integer
 #  created_at   :datetime

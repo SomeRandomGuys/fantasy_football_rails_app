@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121007063641) do
+ActiveRecord::Schema.define(:version => 20121011034243) do
 
   create_table "fantasy_league_types", :force => true do |t|
     t.string   "league_type_description"
@@ -141,7 +141,7 @@ ActiveRecord::Schema.define(:version => 20121007063641) do
   create_table "matches", :force => true do |t|
     t.integer  "home_team_id"
     t.integer  "away_team_id"
-    t.datetime "start_time"
+    t.datetime "match_date"
     t.integer  "home_score"
     t.integer  "away_score"
     t.datetime "created_at"
@@ -157,6 +157,7 @@ ActiveRecord::Schema.define(:version => 20121007063641) do
     t.integer  "age"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.datetime "date_of_birth"
   end
 
   create_table "positions", :force => true do |t|

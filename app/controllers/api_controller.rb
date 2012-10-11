@@ -4,8 +4,6 @@ class ApiController < ApplicationController
   before_filter :authenticate
   respond_to :json, :xml
 
-  @@api_response = { :success => false, :error => nil, :return => nil }
-
   resource_description do
     name 'Read and Write Match Stats'
     short 'Resources'
@@ -33,22 +31,25 @@ class ApiController < ApplicationController
   example 'NOT IMPLEMENTED'
 
   def match_player_stats
-    player = Player.find_by_name_and_team(params[:player_attrs][:first_name], \
-    params[:player_attrs][:last_name], params[:player_attrs][:team])
-    if player.nil?
-      @@api_response[:error] = "Something went wrong"
-    else
-      match_player_stats = MatchPlayerStats.new()
-      match_player_stats.player_id = player.id
-      match_player_stats.match_id = params[:match_player_stats][:match_id]
-      if match_player_stats.save
-        @@api_response[:success] = true  
-      else
-        @@api_response[:error] = "Something went wrong"
-      end
-      @@api_response[:return] = match_player_stats
+
+    api_response = { :success => false, :error => nil, :return => nil }
+
+    begin
+    # Validate Player and Match data exists
+      player = Player.find_by_name_and_team!(params[:player_attrs][:first_name], params[:player_attrs][:last_name], params[:player_attrs][:team])
+      match = Match.find!(params[:match_player_stats][:match_id])
+
+      # Write to match_player_stats table
+      api_response[:return] = MatchPlayerStats.where(:player_id => player.id, :match_id => match.id ).find_or_create!(params[:player_attrs])
+      api_response[:success] = true
+
+    rescue Exception => e
+      api_response[:error] = e.message
+      api_response[:return] = nil
+      api_response[:success] = false
     end
-    render :json => @@api_response
+
+    render :json => api_response
   end
   ############################################################################################################################
 
@@ -59,31 +60,31 @@ class ApiController < ApplicationController
   param :home_score, String, :desc => "Final score of the home team.", :required => true
   param :away_score, String, :desc => "Final score of the away team.", :required => true
   param :start_time, String, :desc => "Match start date time.", :required => true
-  description "Use this method to create an entry for a match. A match entry has to be created before writing player stats"
+  description "Use this method to create/find an entry for a match. A match entry has to be created before writing player stats"
   example "POST \'https://[domain]/api/new_match.json?api_key=[your_api_key]\' \nCONTENT-TYPE: application/json \n" +
     '{"new_match":{"home_team":"Arsenal", "away_team":"Liverpool", "home_score":"3", "away_score":"1"}}'
 
   def new_match
-    # find teams
-    home_team = Team.find_by_name(params[:new_match][:home_team])
-    away_team = Team.find_by_name(params[:new_match][:away_team])
 
-    if home_team.nil? or away_team.nil?
-      @@api_response[:error] = "Invalid home team or away team"
-    else
+    api_response = { :success => false, :error => nil, :return => nil }
+
     # Write a new match with scores
-      @match = Match.new()
-      @match.home_team_id = home_team.id
-      @match.away_team_id = away_team.id
-      @match.home_score = params[:new_match][:home_score]
-      @match.away_score = params[:new_match][:away_score]
-      @match.save
-
-      @@api_response[:success] = true
-      @@api_response[:return] = @match
+    begin
+      home_team = Team.find_by_name!(params[:new_match][:home_team])
+      away_team = Team.find_by_name!(params[:new_match][:away_team])
+      
+      api_response[:return] = Match.where(:home_team_id => home_team.id, :away_team_id => away_team.id,
+              :match_date => params[:new_match][:match_date]).first_or_create!(:home_score => params[:new_match][:home_score],
+              :away_score => params[:new_match][:away_score])
+      
+      api_response[:success] = true
+    rescue Exception => e
+      api_response[:error] = e.message
+      api_response[:success] = false
+      api_response[:return] = nil
     end
 
-    render :json => @@api_response
+    render :json => api_response
   end
   ############################################################################################################################
 

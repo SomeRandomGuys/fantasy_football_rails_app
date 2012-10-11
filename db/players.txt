@@ -1,486 +1,486 @@
-Mousa|Dembélé|Midfielder|Tottenham|25
-Gareth|Bale|Midfielder|Tottenham|23
-Benoit|Assou-Ekotto|Defender|Tottenham|28
-Jan|Vertonghen|Defender|Tottenham|25
-Kyle|Naughton|Defender|Tottenham|23
-Sandro Ranieri|Guimarães Cordeiro|Midfielder|Tottenham|23
-Steven|Caulker|Defender|Tottenham|20
-Jermain|Defoe|Forward|Tottenham|30
-Kyle|Walker|Defender|Tottenham|22
-Hugo|Lloris|Goalkeeper|Tottenham|25
-William|Gallas|Defender|Tottenham|35
-Aaron|Lennon|Midfielder|Tottenham|25
-Clint|Dempsey|Forward|Tottenham|29
-Jake|Livermore|Midfielder|Tottenham|22
-Brad|Friedel|Goalkeeper|Tottenham|41
-Younes|Kaboul|Defender|Tottenham|26
-Emmanuel|Adebayor|Forward|Tottenham|28
-Gylfi|Sigurdsson|Midfielder|Tottenham|23
-Andros|Townsend|Midfielder|Tottenham|21
-Rafael|van der Vaart|Midfielder|Tottenham|29
-Harry|Kane|Forward|Tottenham|19
-Jermaine|Jenas|Midfielder|Tottenham|29
-Michael|Dawson|Defender|Tottenham|28
-Tom|Huddlestone|Midfielder|Tottenham|25
-Carlo|Cudicini|Goalkeeper|Tottenham|39
-Iago|Falqué|Midfielder|Tottenham|22
-Ryan|Mason|Midfielder|Tottenham|21
-Santiago|Cazorla|Midfielder|Arsenal|27
-Mikel|Arteta|Midfielder|Arsenal|30
-Kieran|Gibbs|Defender|Arsenal|23
-Thomas|Vermaelen|Defender|Arsenal|26
-Lukas|Podolski|Forward|Arsenal|27
-Gervais|Yao Kouassi|Forward|Arsenal|25
-Per|Mertesacker|Defender|Arsenal|28
-Alex|Oxlade-Chamberlain|Midfielder|Arsenal|19
-Vassiriki|Abou Diaby|Midfielder|Arsenal|26
-Carl|Jenkinson|Defender|Arsenal|20
-Vito|Mannone|Goalkeeper|Arsenal|24
-Olivier|Giroud|Forward|Arsenal|26
-Aaron|Ramsey|Midfielder|Arsenal|21
-Theo|Walcott|Midfielder|Arsenal|23
-Laurent|Koscielny|Defender|Arsenal|27
-Francis|Coquelin|Midfielder|Arsenal|21
-Andrey|Arshavin|Midfielder|Arsenal|31
-Wojciech|Szczesny|Goalkeeper|Arsenal|22
-André|Clarindo Dos Santos|Defender|Arsenal|29
-Damián|Martinez|Goalkeeper|Arsenal|20
-Johan|Djourou|Defender|Arsenal|25
-Nathan|Baker|Defender|Aston Villa|21
-Ron|Vlaar|Defender|Aston Villa|27
-Christian|Benteke|Forward|Aston Villa|21
-Brad|Guzan|Goalkeeper|Aston Villa|28
-Matthew|Lowton|Defender|Aston Villa|23
-Stephen|Ireland|Midfielder|Aston Villa|26
-Ciaran|Clark|Defender|Aston Villa|23
-Darren|Bent|Forward|Aston Villa|28
-Karim|El Ahmadi|Midfielder|Aston Villa|27
-Eric|Lichaj|Defender|Aston Villa|23
-Barry|Bannan|Midfielder|Aston Villa|22
-Andreas|Weimann|Forward|Aston Villa|21
-Fabian|Delph|Midfielder|Aston Villa|22
-Marc|Albrighton|Midfielder|Aston Villa|22
-Brett|Holman|Forward|Aston Villa|28
-Charles|N'Zogbia|Midfielder|Aston Villa|26
-Chris|Herd|Midfielder|Aston Villa|23
-Ashley Roy|Westwood|Midfielder|Aston Villa|22
-Joe|Bennett|Defender|Aston Villa|22
-Gabriel|Agbonlahor|Forward|Aston Villa|25
-Gary|Gardner|Midfielder|Aston Villa|20
-Nathan|Delfouneso|Forward|Aston Villa|21
-Shay|Given|Goalkeeper|Aston Villa|36
-Derrick|Williams|Defender|Aston Villa|19
-Graham|Burke|Forward|Aston Villa|19
-Jordan|Bowery|Forward|Aston Villa|21
-Eden|Hazard|Forward|Chelsea|21
-Fernando|Torres|Forward|Chelsea|28
-Branislav|Ivanovic|Defender|Chelsea|28
-Juan|Mata|Forward|Chelsea|24
-Ashley|Cole|Defender|Chelsea|31
-Gary|Cahill|Defender|Chelsea|26
-David|Luiz Moreira Marinho|Defender|Chelsea|25
-John Obi|Mikel|Midfielder|Chelsea|25
-John|Terry|Defender|Chelsea|31
-Oscar|dos Santos Emboada Junior|Midfielder|Chelsea|21
-Frank|Lampard|Midfielder|Chelsea|34
-Ramires|Santos do Nascimento|Midfielder|Chelsea|25
-Petr|Cech|Goalkeeper|Chelsea|30
-Ryan|Bertrand|Defender|Chelsea|23
-Daniel|Sturridge|Forward|Chelsea|23
-Raul|Meireles|Midfielder|Chelsea|29
-Victor|Moses|Forward|Chelsea|21
-César|Azpilicueta|Defender|Chelsea|23
-Oriol|Romeu|Midfielder|Chelsea|21
-Michael|Essien|Midfielder|Chelsea|29
-Paulo|Ferreira|Defender|Chelsea|33
-Ross|Turnbull|Goalkeeper|Chelsea|27
-Leighton|Baines|Defender|Everton|27
-Marouane|Fellaini|Midfielder|Everton|24
-Steven|Pienaar|Midfielder|Everton|30
-Phil|Jagielka|Defender|Everton|30
-Nikica|Jelavic|Forward|Everton|27
-Leon|Osman|Midfielder|Everton|31
-Sylvain|Distin|Defender|Everton|34
-Tony|Hibbert|Defender|Everton|31
-Darron|Gibson|Midfielder|Everton|24
-Kevin|Mirallas|Forward|Everton|25
-Seamus|Coleman|Midfielder|Everton|23
-Victor|Anichebe|Forward|Everton|24
-Johnny|Heitinga|Defender|Everton|28
-Tim|Howard|Goalkeeper|Everton|33
-Philip|Neville|Midfielder|Everton|35
-Steven|Naismith|Forward|Everton|26
-Bryan|Oviedo|Defender|Everton|22
-Magaye|Gueye|Forward|Everton|22
-Apostolos|Vellios|Forward|Everton|20
-Ján|Mucha|Goalkeeper|Everton|29
-Ross|Barkley|Midfielder|Everton|18
-Shane|Duffy|Defender|Everton|20
-Mousa|Dembélé|Midfielder|Fulham|25
-Dimitar|Berbatov|Forward|Fulham|31
-Mahamadou|Diarra|Midfielder|Fulham|31
-Mladen|Petric|Forward|Fulham|31
-Damien|Duff|Midfielder|Fulham|33
-Bryan|Ruiz|Forward|Fulham|27
-Chris|Baird|Defender|Fulham|30
-Steve|Sidwell|Midfielder|Fulham|29
-John Arne|Riise|Defender|Fulham|32
-Aaron|Hughes|Defender|Fulham|32
-Mark|Schwarzer|Goalkeeper|Fulham|40
-Brede|Hangeland|Defender|Fulham|31
-Sascha|Riether|Defender|Fulham|29
-Hugo|Rodallega|Forward|Fulham|27
-Matthew|Briggs|Defender|Fulham|21
-Kieran|Richardson|Midfielder|Fulham|27
-Alexander|Kacaniklic|Midfielder|Fulham|21
-Pajtim|Kasami|Midfielder|Fulham|20
-Giorgios|Karagounis|Midfielder|Fulham|35
-Alex|Smith|Defender|Fulham|20
-David|Stockdale|Goalkeeper|Fulham|27
-Marcello|Trotta|Forward|Fulham|20
-Philippe|Senderos|Defender|Fulham|27
-Rafik|Halliche|Defender|Fulham|26
-Stephen|Kelly|Defender|Fulham|29
-Steven|Gerrard|Midfielder|Liverpool|32
-Luis|Suárez|Forward|Liverpool|25
-Raheem|Sterling|Midfielder|Liverpool|17
-Andre|Wisdom|Defender|Liverpool|19
-Nuri|Sahin|Midfielder|Liverpool|24
-Jesús|Fernández Saez|Forward|Liverpool|18
-Glen|Johnson|Defender|Liverpool|28
-Joe|Allen|Midfielder|Liverpool|22
-Daniel|Agger|Defender|Liverpool|27
-Sebastián|Coates|Defender|Liverpool|22
-Martin|Skrtel|Defender|Liverpool|27
-Martin|Kelly|Defender|Liverpool|22
-José|Enrique Sanchez Diaz|Defender|Liverpool|26
-Andy|Carroll|Forward|Liverpool|23
-Fabio|Borini|Forward|Liverpool|21
-Jordan|Henderson|Midfielder|Liverpool|22
-Stewart|Downing|Midfielder|Liverpool|28
-Joe|Cole|Midfielder|Liverpool|30
-Jonjo|Shelvey|Midfielder|Liverpool|20
-José|Reina|Goalkeeper|Liverpool|30
-Jamie|Carragher|Defender|Liverpool|34
-Oussama|Assaidi|Forward|Liverpool|24
-Lucas|Leiva|Midfielder|Liverpool|25
-Bradley|Jones|Goalkeeper|Liverpool|30
-Charlie|Adam|Midfielder|Liverpool|26
-Micah|Richards|Defender|Manchester City|24
-Aleksandar|Kolarov|Defender|Manchester City|26
-Carlos|Tévez|Forward|Manchester City|28
-Francisco Javier|García Fernández|Midfielder|Manchester City|25
-David|Silva|Midfielder|Manchester City|26
-Gnegneri Yaya|Touré|Midfielder|Manchester City|29
-James|Milner|Midfielder|Manchester City|26
-Pablo|Zabaleta|Defender|Manchester City|27
-Samir|Nasri|Midfielder|Manchester City|25
-Sergio|Agüero|Forward|Manchester City|24
-Joleon|Lescott|Defender|Manchester City|30
-Gaël|Clichy|Defender|Manchester City|27
-Vincent|Kompany|Defender|Manchester City|26
-Douglas|Maicon|Defender|Manchester City|31
-Edin|Dzeko|Forward|Manchester City|26
-Gareth|Barry|Midfielder|Manchester City|31
-Nigel|de Jong|Midfielder|Manchester City|27
-Kolo|Touré|Defender|Manchester City|31
-Joe|Hart|Goalkeeper|Manchester City|25
-Scott|Sinclair|Midfielder|Manchester City|23
-Jack|Rodwell|Midfielder|Manchester City|21
-Mario|Balotelli|Forward|Manchester City|22
-Matija|Nastasic|Defender|Manchester City|19
-Abdul|Razak|Midfielder|Manchester City|19
-Costel|Pantilimon|Goalkeeper|Manchester City|25
-Richard|Wright|Goalkeeper|Manchester City|34
-Stefan|Savic|Defender|Manchester City|21
-Alexander|Büttner|Defender|Manchester United|23
-Rafael Pereira|da Silva|Defender|Manchester United|22
-Rio|Ferdinand|Defender|Manchester United|33
-David|De Gea|Goalkeeper|Manchester United|21
-Nick|Powell|Forward|Manchester United|18
-Robin|van Persie|Forward|Manchester United|29
-Patrice|Evra|Defender|Manchester United|31
-Tom|Cleverley|Midfielder|Manchester United|23
-Wayne|Rooney|Forward|Manchester United|26
-Luis Antonio|Valencia|Midfielder|Manchester United|27
-Shinji|Kagawa|Midfielder|Manchester United|23
-Jonny|Evans|Defender|Manchester United|24
-Michael|Carrick|Midfielder|Manchester United|31
-Luís|Almeida da Cunha|Midfielder|Manchester United|25
-Paul|Scholes|Midfielder|Manchester United|37
-Javier|Hernández|Forward|Manchester United|24
-Anders|Lindegaard|Goalkeeper|Manchester United|28
-Danny|Welbeck|Forward|Manchester United|21
-Nemanja|Vidic|Defender|Manchester United|30
-Ashley|Young|Midfielder|Manchester United|27
-Anderson|Oliveira|Midfielder|Manchester United|24
-Ryan|Giggs|Midfielder|Manchester United|38
-Dimitar|Berbatov|Forward|Manchester United|31
-Scott|Wootton|Defender|Manchester United|21
-Michael|Williamson|Defender|Newcastle United|28
-Demba|Ba|Forward|Newcastle United|27
-Hatem|Ben Arfa|Midfielder|Newcastle United|25
-Steve|Harper|Goalkeeper|Newcastle United|37
-Yohan|Cabaye|Midfielder|Newcastle United|26
-Jonás|Gutiérrez|Midfielder|Newcastle United|29
-Cheik Ismael|Tioté|Midfielder|Newcastle United|26
-Tim|Krul|Goalkeeper|Newcastle United|24
-Davide|Santon|Defender|Newcastle United|21
-Steven|Taylor|Defender|Newcastle United|26
-James|Tavernier|Defender|Newcastle United|20
-Fabricio|Coloccini|Defender|Newcastle United|30
-James|Perch|Defender|Newcastle United|27
-Ryan|Taylor|Defender|Newcastle United|28
-Shane|Ferguson|Defender|Newcastle United|21
-Shola|Ameobi|Forward|Newcastle United|30
-Gael|Bigirimana|Midfielder|Newcastle United|18
-Danny|Simpson|Defender|Newcastle United|25
-Vurnon|Anita|Midfielder|Newcastle United|23
-Sylvain|Marveaux|Midfielder|Newcastle United|26
-Gabriel|Obertan|Midfielder|Newcastle United|23
-Papiss Demba|Cissé|Forward|Newcastle United|27
-Dan|Gosling|Midfielder|Newcastle United|22
-Jak|Alnwick|Goalkeeper|Newcastle United|19
-Robert|Elliot|Goalkeeper|Newcastle United|26
-Romain|Amalfitano|Midfielder|Newcastle United|23
-Sammy|Ameobi|Forward|Newcastle United|20
-Robert|Snodgrass|Forward|Norwich|25
-Bradley|Johnson|Midfielder|Norwich|25
-Leon|Barnett|Defender|Norwich|26
-Russell|Martin|Defender|Norwich|26
-Harry|Kane|Forward|Norwich|19
-Grant|Holt|Forward|Norwich|31
-Sébastien|Bassong|Defender|Norwich|26
-Alexander|Tettey|Midfielder|Norwich|26
-Jonathan|Howson|Midfielder|Norwich|24
-Anthony|Pilkington|Midfielder|Norwich|24
-Wes|Hoolahan|Midfielder|Norwich|30
-Elliott|Bennett|Midfielder|Norwich|23
-Javier|Garrido|Defender|Norwich|27
-John|Ruddy|Goalkeeper|Norwich|25
-Simeon|Jackson|Forward|Norwich|25
-Andrew|Surman|Midfielder|Norwich|26
-Steve|Morison|Forward|Norwich|29
-Ryan|Bennett|Defender|Norwich|22
-Chris|Martin|Forward|Norwich|23
-Marc|Tierney|Defender|Norwich|27
-Michael|Turner|Defender|Norwich|28
-David|Fox|Midfielder|Norwich|28
-Declan|Rudd|Goalkeeper|Norwich|21
-James|Vaughan|Forward|Norwich|24
-Mark|Bunn|Goalkeeper|Norwich|27
-Simon|Lappin|Midfielder|Norwich|29
-Adel|Taarabt|Midfielder|Queens Park Rangers|23
-Ryan|Nelsen|Defender|Queens Park Rangers|34
-Esteban|Granero|Midfielder|Queens Park Rangers|25
-Stéphane|Mbia|Defender|Queens Park Rangers|26
-Bobby|Zamora|Forward|Queens Park Rangers|31
-Alejandro|Faurlin|Midfielder|Queens Park Rangers|26
-Julio|César|Goalkeeper|Queens Park Rangers|33
-Fabio Pereira|da Silva|Defender|Queens Park Rangers|22
-Ji-Sung|Park|Midfielder|Queens Park Rangers|31
-Anton|Ferdinand|Defender|Queens Park Rangers|27
-Clint|Hill|Defender|Queens Park Rangers|33
-Nedum|Onuoha|Defender|Queens Park Rangers|25
-José|Bosingwa|Defender|Queens Park Rangers|30
-Junior|Hoilett|Midfielder|Queens Park Rangers|22
-Armand|Traore|Defender|Queens Park Rangers|23
-Shaun|Wright-Phillips|Midfielder|Queens Park Rangers|30
-Djibril|Cissé|Forward|Queens Park Rangers|31
-Kieron|Dyer|Midfielder|Queens Park Rangers|33
-Jamie|Mackie|Midfielder|Queens Park Rangers|27
-Shaun|Derry|Midfielder|Queens Park Rangers|34
-Andrew|Johnson|Forward|Queens Park Rangers|31
-Samba|Diakité|Midfielder|Queens Park Rangers|23
-Robert|Green|Goalkeeper|Queens Park Rangers|32
-Brian|Murphy|Goalkeeper|Queens Park Rangers|29
-Hogan|Ephraim|Midfielder|Queens Park Rangers|24
-Max|Ehmer|Defender|Queens Park Rangers|20
-Adrian|Mariappa|Defender|Reading|26
-Jimmy|Kébé|Midfielder|Reading|28
-Jobi|McAnuff|Midfielder|Reading|30
-Kaspars|Gorkss|Defender|Reading|30
-Nicky|Shorey|Defender|Reading|31
-Shaun|Cummings|Defender|Reading|23
-Alex|McCarthy|Goalkeeper|Reading|22
-Noel|Hunt|Forward|Reading|29
-Pavel|Pogrebnyak|Forward|Reading|28
-Danny|Guthrie|Midfielder|Reading|25
-Alex|Pearce|Defender|Reading|23
-Jay|Tabb|Midfielder|Reading|28
-Mikele|Leigertwood|Midfielder|Reading|29
-Garath|McCleary|Midfielder|Reading|25
-Jem|Karacan|Midfielder|Reading|23
-Chris|Gunter|Defender|Reading|23
-Hal|Robson-Kanu|Midfielder|Reading|23
-Adam|Le Fondre|Forward|Reading|25
-Ian|Harte|Defender|Reading|35
-Jason|Roberts|Forward|Reading|34
-Adam|Federici|Goalkeeper|Reading|27
-Jake|Taylor|Midfielder|Reading|20
-Simon|Church|Forward|Reading|23
-Stuart|Taylor|Goalkeeper|Reading|31
-Gastón|Ramírez|Midfielder|Southampton|21
-Rickie|Lambert|Forward|Southampton|30
-Adam|Lallana|Midfielder|Southampton|24
-Morgan|Schneiderlin|Midfielder|Southampton|22
-Maya|Yoshida|Defender|Southampton|24
-Jason|Puncheon|Midfielder|Southampton|26
-Steven|Davis|Midfielder|Southampton|27
-Kelvin|Davis|Goalkeeper|Southampton|36
-Jose|Fonte|Defender|Southampton|28
-Nathaniel|Clyne|Defender|Southampton|21
-Paulo|Gazzaniga|Goalkeeper|Southampton|20
-Frazer|Richardson|Defender|Southampton|29
-Daniel|Fox|Defender|Southampton|26
-James|Ward-Prowse|Midfielder|Southampton|17
-Guilherme|Do Prado|Forward|Southampton|30
-Emmanuel|Mayuka|Forward|Southampton|21
-Jay|Rodriguez|Forward|Southampton|23
-Jos|Hooiveld|Defender|Southampton|29
-Ben|Reeves|Defender|Southampton|20
-Richard|Chaplow|Midfielder|Southampton|27
-Billy|Sharp|Forward|Southampton|26
-Daniel|Seaborne|Defender|Southampton|25
-Luke|Shaw|Defender|Southampton|17
-Tadanari|Lee|Forward|Southampton|26
-Peter|Crouch|Forward|Stoke|31
-Ryan|Shawcross|Defender|Stoke|25
-Geoff|Cameron|Defender|Stoke|27
-Marc|Wilson|Defender|Stoke|25
-Robert|Huth|Defender|Stoke|28
-Steven|N'Zonzi|Midfielder|Stoke|23
-Asmir|Begovic|Goalkeeper|Stoke|25
-Jonathan|Walters|Forward|Stoke|29
-Glenn|Whelan|Midfielder|Stoke|28
-Michael|Kightly|Midfielder|Stoke|26
-Jermaine|Pennant|Midfielder|Stoke|29
-Andy|Wilkinson|Defender|Stoke|28
-Charlie|Adam|Midfielder|Stoke|26
-Matthew|Etherington|Midfielder|Stoke|31
-Kenwyne|Jones|Forward|Stoke|28
-Dean|Whitehead|Midfielder|Stoke|30
-Ryan|Shotton|Defender|Stoke|23
-Wilson|Palacios|Midfielder|Stoke|28
-Cameron|Jerome|Forward|Stoke|25
-Michael|Owen|Forward|Stoke|32
-Rory|Delap|Midfielder|Stoke|36
-Maurice|Edu|Midfielder|Stoke|26
-Jamie|Ness|Midfielder|Stoke|21
-Matthew|Upson|Defender|Stoke|33
-Thomas|Sørensen|Goalkeeper|Stoke|36
-Kieran|Richardson|Midfielder|Sunderland|27
-Steven|Fletcher|Forward|Sunderland|25
-Sebastian|Larsson|Midfielder|Sunderland|27
-Simon|Mignolet|Goalkeeper|Sunderland|24
-Craig|Gardner|Midfielder|Sunderland|25
-Lee|Cattermole|Midfielder|Sunderland|24
-Danny|Rose|Defender|Sunderland|22
-Titus|Bramble|Defender|Sunderland|31
-James|McClean|Midfielder|Sunderland|23
-John|O'Shea|Defender|Sunderland|31
-Carlos|Cuéllar|Defender|Sunderland|31
-Jack|Colback|Midfielder|Sunderland|22
-Ahmed|Elmohamady|Midfielder|Sunderland|25
-Stéphane|Sessegnon|Midfielder|Sunderland|28
-David|Meyler|Midfielder|Sunderland|23
-David|Vaughan|Midfielder|Sunderland|29
-Adam|Johnson|Midfielder|Sunderland|25
-Louis|Saha|Forward|Sunderland|34
-Fraizer|Campbell|Forward|Sunderland|25
-Connor|Wickham|Forward|Sunderland|19
-Dong-Won|Ji|Forward|Sunderland|21
-Keiren|Westwood|Goalkeeper|Sunderland|27
-Matthew|Kilgallon|Defender|Sunderland|28
-Miguel|Pérez Cuesta|Midfielder|Swansea|26
-José Manuel|Flores Moreno|Defender|Swansea|25
-Angel|Rangel|Defender|Swansea|29
-Wayne|Routledge|Midfielder|Swansea|27
-Ashley|Williams|Defender|Swansea|28
-Scott|Sinclair|Midfielder|Swansea|23
-Neil|Taylor|Defender|Swansea|23
-Nathan|Dyer|Midfielder|Swansea|24
-Sung-Yueng|Ki|Midfielder|Swansea|23
-Leon|Britton|Midfielder|Swansea|30
-Jonathan|De Guzmán|Midfielder|Swansea|25
-Alan|Tate|Defender|Swansea|30
-Michel|Vorm|Goalkeeper|Swansea|28
-Ben|Davies|Defender|Swansea|19
-Danny|Graham|Forward|Swansea|27
-Kemy|Agustien|Midfielder|Swansea|26
-Luke|Moore|Forward|Swansea|26
-Pablo|Hernández|Midfielder|Swansea|27
-Mark|Gower|Midfielder|Swansea|34
-Itay|Shechter|Forward|Swansea|25
-Ashley|Richards|Midfielder|Swansea|21
-Dwight|Tiendalli|Defender|Swansea|26
-Garry|Monk|Defender|Swansea|33
-Gerhard|Tremmel|Goalkeeper|Swansea|33
-Stephen|Dobbie|Forward|Swansea|29
-Zoltán|Gera|Midfielder|West Bromwich Albion|33
-Claudio|Yacob|Midfielder|West Bromwich Albion|25
-James|Morrison|Midfielder|West Bromwich Albion|26
-Gareth|McAuley|Defender|West Bromwich Albion|32
-Jonas|Olsson|Defender|West Bromwich Albion|29
-Shane|Long|Forward|West Bromwich Albion|25
-Liam|Ridgewell|Defender|West Bromwich Albion|28
-Youssuf|Mulumbu|Midfielder|West Bromwich Albion|25
-Gonzalo|Jara|Defender|West Bromwich Albion|27
-Ben|Foster|Goalkeeper|West Bromwich Albion|29
-Goran|Popov|Defender|West Bromwich Albion|28
-Peter|Odemwingie|Forward|West Bromwich Albion|31
-Romelu|Lukaku|Forward|West Bromwich Albion|19
-Steven|Reid|Defender|West Bromwich Albion|31
-Chris|Brunt|Midfielder|West Bromwich Albion|27
-Billy|Jones|Defender|West Bromwich Albion|25
-Graham|Dorrans|Midfielder|West Bromwich Albion|25
-Gabriel|Tamas|Defender|West Bromwich Albion|28
-Markus|Rosenberg|Forward|West Bromwich Albion|30
-Marc-Antoine|Fortuné|Forward|West Bromwich Albion|31
-Boaz|Myhill|Goalkeeper|West Bromwich Albion|29
-Craig|Dawson|Defender|West Bromwich Albion|22
-Luke|Daniels|Goalkeeper|West Bromwich Albion|24
-Yassine|El Ghanassy|Midfielder|West Bromwich Albion|22
-Andy|Carroll|Forward|West Ham|23
-Mohamed|Diamé|Midfielder|West Ham|25
-Mark|Noble|Midfielder|West Ham|25
-Ricardo|Vaz Te|Forward|West Ham|26
-James|Collins|Defender|West Ham|29
-Winston|Reid|Defender|West Ham|24
-Jussi|Jääskeläinen|Goalkeeper|West Ham|37
-Kevin|Nolan|Midfielder|West Ham|30
-Joey|O'Brien|Defender|West Ham|26
-Guy|Demel|Defender|West Ham|31
-Matthew|Taylor|Midfielder|West Ham|30
-George|McCartney|Defender|West Ham|31
-Matthew|Jarvis|Midfielder|West Ham|26
-James|Tomkins|Defender|West Ham|23
-Modibo|Maiga|Forward|West Ham|26
-Carlton|Cole|Forward|West Ham|28
-Alou|Diarra|Midfielder|West Ham|31
-Yossi|Benayoun|Midfielder|West Ham|32
-Robert|Hall|Forward|West Ham|18
-Gary|O'Neil|Midfielder|West Ham|29
-Nicky|Maynard|Forward|West Ham|25
-Stephen|Henderson|Goalkeeper|West Ham|24
-Antolin|Alcaraz|Defender|Wigan|30
-James|McArthur|Midfielder|Wigan|25
-Franco|Di Santo|Forward|Wigan|23
-Arouna|Koné|Forward|Wigan|28
-Shaun|Maloney|Midfielder|Wigan|29
-Ali|Al-Habsi|Goalkeeper|Wigan|30
-Iván|Ramis|Defender|Wigan|27
-Emmerson|Boyce|Defender|Wigan|33
-Maynor|Figueroa|Defender|Wigan|29
-James|McCarthy|Midfielder|Wigan|21
-Gary|Caldwell|Defender|Wigan|30
-Victor|Moses|Forward|Wigan|21
-Jean|Beausejour|Midfielder|Wigan|28
-David|Jones|Midfielder|Wigan|27
-Jordi|Gómez García-Penche|Midfielder|Wigan|27
-Ben|Watson|Midfielder|Wigan|27
-Callum|McManaman|Forward|Wigan|21
-Ryo|Miyaichi|Midfielder|Wigan|19
-Mauro|Boselli|Forward|Wigan|27
-Albert|Crusat|Midfielder|Wigan|30
-Michael|Pollitt|Goalkeeper|Wigan|40
+Mousa|Dembélé|Midfielder|Tottenham|25|/Date(553388400000)/
+Gareth|Bale|Midfielder|Tottenham|23|/Date(616546800000)/
+Benoit|Assou-Ekotto|Defender|Tottenham|28|/Date(448934400000)/
+Jan|Vertonghen|Defender|Tottenham|25|/Date(546217200000)/
+Kyle|Naughton|Defender|Tottenham|23|/Date(595209600000)/
+Sandro Ranieri|Guimarães Cordeiro|Midfielder|Tottenham|23|/Date(605923200000)/
+Steven|Caulker|Defender|Tottenham|20|/Date(693964800000)/
+Jermain|Defoe|Forward|Tottenham|30|/Date(402793200000)/
+Kyle|Walker|Defender|Tottenham|22|/Date(643849200000)/
+Hugo|Lloris|Goalkeeper|Tottenham|25|/Date(535939200000)/
+William|Gallas|Defender|Tottenham|35|/Date(240620400000)/
+Aaron|Lennon|Midfielder|Tottenham|25|/Date(545526000000)/
+Clint|Dempsey|Forward|Tottenham|29|/Date(416016000000)/
+Jake|Livermore|Midfielder|Tottenham|22|/Date(627004800000)/
+Brad|Friedel|Goalkeeper|Tottenham|41|/Date(43369200000)/
+Younes|Kaboul|Defender|Tottenham|26|/Date(505180800000)/
+Emmanuel|Adebayor|Forward|Tottenham|28|/Date(446601600000)/
+Gylfi|Sigurdsson|Midfielder|Tottenham|23|/Date(621298800000)/
+Andros|Townsend|Midfielder|Tottenham|21|/Date(679618800000)/
+Rafael|van der Vaart|Midfielder|Tottenham|29|/Date(413769600000)/
+Harry|Kane|Forward|Tottenham|19|/Date(743814000000)/
+Jermaine|Jenas|Midfielder|Tottenham|29|/Date(414374400000)/
+Michael|Dawson|Defender|Tottenham|28|/Date(437961600000)/
+Tom|Huddlestone|Midfielder|Tottenham|25|/Date(536112000000)/
+Carlo|Cudicini|Goalkeeper|Tottenham|39|/Date(116118000000)/
+Iago|Falqué|Midfielder|Tottenham|22|/Date(631411200000)/
+Ryan|Mason|Midfielder|Tottenham|21|/Date(676767600000)/
+Santiago|Cazorla|Midfielder|Arsenal|27|/Date(471744000000)/
+Mikel|Arteta|Midfielder|Arsenal|30|/Date(385948800000)/
+Kieran|Gibbs|Defender|Arsenal|23|/Date(622767600000)/
+Thomas|Vermaelen|Defender|Arsenal|26|/Date(500774400000)/
+Lukas|Podolski|Forward|Arsenal|27|/Date(486687600000)/
+Gervais|Yao Kouassi|Forward|Arsenal|25|/Date(549068400000)/
+Per|Mertesacker|Defender|Arsenal|28|/Date(465260400000)/
+Alex|Oxlade-Chamberlain|Midfielder|Arsenal|19|/Date(745369200000)/
+Vassiriki|Abou Diaby|Midfielder|Arsenal|26|/Date(516150000000)/
+Carl|Jenkinson|Defender|Arsenal|20|/Date(697507200000)/
+Vito|Mannone|Goalkeeper|Arsenal|24|/Date(573264000000)/
+Olivier|Giroud|Forward|Arsenal|26|/Date(528418800000)/
+Aaron|Ramsey|Midfielder|Arsenal|21|/Date(662169600000)/
+Theo|Walcott|Midfielder|Arsenal|23|/Date(606009600000)/
+Laurent|Koscielny|Defender|Arsenal|27|/Date(495154800000)/
+Francis|Coquelin|Midfielder|Arsenal|21|/Date(674089200000)/
+Andrey|Arshavin|Midfielder|Arsenal|31|/Date(359938800000)/
+Wojciech|Szczesny|Goalkeeper|Arsenal|22|/Date(640393200000)/
+André|Clarindo Dos Santos|Defender|Arsenal|29|/Date(415929600000)/
+Damián|Martinez|Goalkeeper|Arsenal|20|/Date(715388400000)/
+Johan|Djourou|Defender|Arsenal|25|/Date(537926400000)/
+Nathan|Baker|Defender|Aston Villa|21|/Date(672361200000)/
+Ron|Vlaar|Defender|Aston Villa|27|/Date(477360000000)/
+Christian|Benteke|Forward|Aston Villa|21|/Date(660182400000)/
+Brad|Guzan|Goalkeeper|Aston Villa|28|/Date(463532400000)/
+Matthew|Lowton|Defender|Aston Villa|23|/Date(613350000000)/
+Stephen|Ireland|Midfielder|Aston Villa|26|/Date(525049200000)/
+Ciaran|Clark|Defender|Aston Villa|23|/Date(622767600000)/
+Darren|Bent|Forward|Aston Villa|28|/Date(444873600000)/
+Karim|El Ahmadi|Midfielder|Aston Villa|27|/Date(475632000000)/
+Eric|Lichaj|Defender|Aston Villa|23|/Date(595728000000)/
+Barry|Bannan|Midfielder|Aston Villa|22|/Date(628473600000)/
+Andreas|Weimann|Forward|Aston Villa|21|/Date(681346800000)/
+Fabian|Delph|Midfielder|Aston Villa|22|/Date(627609600000)/
+Marc|Albrighton|Midfielder|Aston Villa|22|/Date(627350400000)/
+Brett|Holman|Forward|Aston Villa|28|/Date(449190000000)/
+Charles|N'Zogbia|Midfielder|Aston Villa|26|/Date(517618800000)/
+Chris|Herd|Midfielder|Aston Villa|23|/Date(607647600000)/
+Ashley Roy|Westwood|Midfielder|Aston Villa|22|/Date(638924400000)/
+Joe|Bennett|Defender|Aston Villa|22|/Date(638578800000)/
+Gabriel|Agbonlahor|Forward|Aston Villa|25|/Date(529542000000)/
+Gary|Gardner|Midfielder|Aston Villa|20|/Date(709513200000)/
+Nathan|Delfouneso|Forward|Aston Villa|21|/Date(665452800000)/
+Shay|Given|Goalkeeper|Aston Villa|36|/Date(198802800000)/
+Derrick|Williams|Defender|Aston Villa|19|/Date(727228800000)/
+Graham|Burke|Forward|Aston Villa|19|/Date(748566000000)/
+Jordan|Bowery|Forward|Aston Villa|21|/Date(678409200000)/
+Eden|Hazard|Forward|Chelsea|21|/Date(663206400000)/
+Fernando|Torres|Forward|Chelsea|28|/Date(448588800000)/
+Branislav|Ivanovic|Defender|Chelsea|28|/Date(446256000000)/
+Juan|Mata|Forward|Chelsea|24|/Date(578185200000)/
+Ashley|Cole|Defender|Chelsea|31|/Date(346118400000)/
+Gary|Cahill|Defender|Chelsea|26|/Date(503798400000)/
+David|Luiz Moreira Marinho|Defender|Chelsea|25|/Date(546044400000)/
+John Obi|Mikel|Midfielder|Chelsea|25|/Date(546044400000)/
+John|Terry|Defender|Chelsea|31|/Date(344995200000)/
+Oscar|dos Santos Emboada Junior|Midfielder|Chelsea|21|/Date(684370800000)/
+Frank|Lampard|Midfielder|Chelsea|34|/Date(267145200000)/
+Ramires|Santos do Nascimento|Midfielder|Chelsea|25|/Date(543542400000)/
+Petr|Cech|Goalkeeper|Chelsea|30|/Date(390697200000)/
+Ryan|Bertrand|Defender|Chelsea|23|/Date(618274800000)/
+Daniel|Sturridge|Forward|Chelsea|23|/Date(620607600000)/
+Raul|Meireles|Midfielder|Chelsea|29|/Date(416707200000)/
+Victor|Moses|Forward|Chelsea|21|/Date(660960000000)/
+César|Azpilicueta|Defender|Chelsea|23|/Date(620262000000)/
+Oriol|Romeu|Midfielder|Chelsea|21|/Date(685666800000)/
+Michael|Essien|Midfielder|Chelsea|29|/Date(407721600000)/
+Paulo|Ferreira|Defender|Chelsea|33|/Date(285465600000)/
+Ross|Turnbull|Goalkeeper|Chelsea|27|/Date(473644800000)/
+Leighton|Baines|Defender|Everton|27|/Date(471571200000)/
+Marouane|Fellaini|Midfielder|Everton|24|/Date(564537600000)/
+Steven|Pienaar|Midfielder|Everton|30|/Date(385171200000)/
+Phil|Jagielka|Defender|Everton|30|/Date(398386800000)/
+Nikica|Jelavic|Forward|Everton|27|/Date(493945200000)/
+Leon|Osman|Midfielder|Everton|31|/Date(358902000000)/
+Sylvain|Distin|Defender|Everton|34|/Date(250214400000)/
+Tony|Hibbert|Defender|Everton|31|/Date(351475200000)/
+Darron|Gibson|Midfielder|Everton|24|/Date(562114800000)/
+Kevin|Mirallas|Forward|Everton|25|/Date(560386800000)/
+Seamus|Coleman|Midfielder|Everton|23|/Date(592527600000)/
+Victor|Anichebe|Forward|Everton|24|/Date(577753200000)/
+Johnny|Heitinga|Defender|Everton|28|/Date(437702400000)/
+Tim|Howard|Goalkeeper|Everton|33|/Date(289526400000)/
+Philip|Neville|Midfielder|Everton|35|/Date(222652800000)/
+Steven|Naismith|Forward|Everton|26|/Date(527036400000)/
+Bryan|Oviedo|Defender|Everton|22|/Date(635299200000)/
+Magaye|Gueye|Forward|Everton|22|/Date(647218800000)/
+Apostolos|Vellios|Forward|Everton|20|/Date(694828800000)/
+Ján|Mucha|Goalkeeper|Everton|29|/Date(407894400000)/
+Ross|Barkley|Midfielder|Everton|18|/Date(755049600000)/
+Shane|Duffy|Defender|Everton|20|/Date(694224000000)/
+Mousa|Dembélé|Midfielder|Fulham|25|/Date(553388400000)/
+Dimitar|Berbatov|Forward|Fulham|31|/Date(349660800000)/
+Mahamadou|Diarra|Midfielder|Fulham|31|/Date(358988400000)/
+Mladen|Petric|Forward|Fulham|31|/Date(347155200000)/
+Damien|Duff|Midfielder|Fulham|33|/Date(289180800000)/
+Bryan|Ruiz|Forward|Fulham|27|/Date(493167600000)/
+Chris|Baird|Defender|Fulham|30|/Date(383443200000)/
+Steve|Sidwell|Midfielder|Fulham|29|/Date(408672000000)/
+John Arne|Riise|Defender|Fulham|32|/Date(338598000000)/
+Aaron|Hughes|Defender|Fulham|32|/Date(310867200000)/
+Mark|Schwarzer|Goalkeeper|Fulham|40|/Date(87174000000)/
+Brede|Hangeland|Defender|Fulham|31|/Date(361839600000)/
+Sascha|Riether|Defender|Fulham|29|/Date(417225600000)/
+Hugo|Rodallega|Forward|Fulham|27|/Date(491094000000)/
+Matthew|Briggs|Defender|Fulham|21|/Date(668217600000)/
+Kieran|Richardson|Midfielder|Fulham|27|/Date(467161200000)/
+Alexander|Kacaniklic|Midfielder|Fulham|21|/Date(682038000000)/
+Pajtim|Kasami|Midfielder|Fulham|20|/Date(707439600000)/
+Giorgios|Karagounis|Midfielder|Fulham|35|/Date(226454400000)/
+Alex|Smith|Defender|Fulham|20|/Date(688867200000)/
+David|Stockdale|Goalkeeper|Fulham|27|/Date(496018800000)/
+Marcello|Trotta|Forward|Fulham|20|/Date(717721200000)/
+Philippe|Senderos|Defender|Fulham|27|/Date(477187200000)/
+Rafik|Halliche|Defender|Fulham|26|/Date(525999600000)/
+Stephen|Kelly|Defender|Fulham|29|/Date(431650800000)/
+Steven|Gerrard|Midfielder|Liverpool|32|/Date(328489200000)/
+Luis|Suárez|Forward|Liverpool|25|/Date(538444800000)/
+Raheem|Sterling|Midfielder|Liverpool|17|/Date(786844800000)/
+Andre|Wisdom|Defender|Liverpool|19|/Date(736902000000)/
+Nuri|Sahin|Midfielder|Liverpool|24|/Date(589417200000)/
+Jesús|Fernández Saez|Forward|Liverpool|18|/Date(753667200000)/
+Glen|Johnson|Defender|Liverpool|28|/Date(462063600000)/
+Joe|Allen|Midfielder|Liverpool|22|/Date(637372800000)/
+Daniel|Agger|Defender|Liverpool|27|/Date(471657600000)/
+Sebastián|Coates|Defender|Liverpool|22|/Date(655254000000)/
+Martin|Skrtel|Defender|Liverpool|27|/Date(471916800000)/
+Martin|Kelly|Defender|Liverpool|22|/Date(641170800000)/
+José|Enrique Sanchez Diaz|Defender|Liverpool|26|/Date(506822400000)/
+Andy|Carroll|Forward|Liverpool|23|/Date(600048000000)/
+Fabio|Borini|Forward|Liverpool|21|/Date(670204800000)/
+Jordan|Henderson|Midfielder|Liverpool|22|/Date(645577200000)/
+Stewart|Downing|Midfielder|Liverpool|28|/Date(459298800000)/
+Joe|Cole|Midfielder|Liverpool|30|/Date(374025600000)/
+Jonjo|Shelvey|Midfielder|Liverpool|20|/Date(699148800000)/
+José|Reina|Goalkeeper|Liverpool|30|/Date(399596400000)/
+Jamie|Carragher|Defender|Liverpool|34|/Date(254793600000)/
+Oussama|Assaidi|Forward|Liverpool|24|/Date(587602800000)/
+Lucas|Leiva|Midfielder|Liverpool|25|/Date(537148800000)/
+Bradley|Jones|Goalkeeper|Liverpool|30|/Date(385344000000)/
+Charlie|Adam|Midfielder|Liverpool|26|/Date(503020800000)/
+Micah|Richards|Defender|Manchester City|24|/Date(583110000000)/
+Aleksandar|Kolarov|Defender|Manchester City|26|/Date(500428800000)/
+Carlos|Tévez|Forward|Manchester City|28|/Date(444787200000)/
+Francisco Javier|García Fernández|Midfielder|Manchester City|25|/Date(539740800000)/
+David|Silva|Midfielder|Manchester City|26|/Date(505526400000)/
+Gnegneri Yaya|Touré|Midfielder|Manchester City|29|/Date(421628400000)/
+James|Milner|Midfielder|Manchester City|26|/Date(505180800000)/
+Pablo|Zabaleta|Defender|Manchester City|27|/Date(474681600000)/
+Samir|Nasri|Midfielder|Manchester City|25|/Date(551660400000)/
+Sergio|Agüero|Forward|Manchester City|24|/Date(581209200000)/
+Joleon|Lescott|Defender|Manchester City|30|/Date(398300400000)/
+Gaël|Clichy|Defender|Manchester City|27|/Date(491180400000)/
+Vincent|Kompany|Defender|Manchester City|26|/Date(513471600000)/
+Douglas|Maicon|Defender|Manchester City|31|/Date(364950000000)/
+Edin|Dzeko|Forward|Manchester City|26|/Date(511401600000)/
+Gareth|Barry|Midfielder|Manchester City|31|/Date(351734400000)/
+Nigel|de Jong|Midfielder|Manchester City|27|/Date(470620800000)/
+Kolo|Touré|Defender|Manchester City|31|/Date(353808000000)/
+Joe|Hart|Goalkeeper|Manchester City|25|/Date(545785200000)/
+Scott|Sinclair|Midfielder|Manchester City|23|/Date(606787200000)/
+Jack|Rodwell|Midfielder|Manchester City|21|/Date(668649600000)/
+Mario|Balotelli|Forward|Manchester City|22|/Date(650415600000)/
+Matija|Nastasic|Defender|Manchester City|19|/Date(733276800000)/
+Abdul|Razak|Midfielder|Manchester City|19|/Date(721440000000)/
+Costel|Pantilimon|Goalkeeper|Manchester City|25|/Date(539136000000)/
+Richard|Wright|Goalkeeper|Manchester City|34|/Date(247536000000)/
+Stefan|Savic|Defender|Manchester City|21|/Date(663292800000)/
+Alexander|Büttner|Defender|Manchester United|23|/Date(603158400000)/
+Rafael Pereira|da Silva|Defender|Manchester United|22|/Date(647478000000)/
+Rio|Ferdinand|Defender|Manchester United|33|/Date(279244800000)/
+David|De Gea|Goalkeeper|Manchester United|21|/Date(657936000000)/
+Nick|Powell|Forward|Manchester United|18|/Date(764380800000)/
+Robin|van Persie|Forward|Manchester United|29|/Date(428972400000)/
+Patrice|Evra|Defender|Manchester United|31|/Date(358729200000)/
+Tom|Cleverley|Midfielder|Manchester United|23|/Date(618879600000)/
+Wayne|Rooney|Forward|Manchester United|26|/Date(498956400000)/
+Luis Antonio|Valencia|Midfielder|Manchester United|27|/Date(491958000000)/
+Shinji|Kagawa|Midfielder|Manchester United|23|/Date(606096000000)/
+Jonny|Evans|Defender|Manchester United|24|/Date(568080000000)/
+Michael|Carrick|Midfielder|Manchester United|31|/Date(365122800000)/
+Luís|Almeida da Cunha|Midfielder|Manchester United|25|/Date(532569600000)/
+Paul|Scholes|Midfielder|Manchester United|37|/Date(153792000000)/
+Javier|Hernández|Forward|Manchester United|24|/Date(581122800000)/
+Anders|Lindegaard|Goalkeeper|Manchester United|28|/Date(450658800000)/
+Danny|Welbeck|Forward|Manchester United|21|/Date(659577600000)/
+Nemanja|Vidic|Defender|Manchester United|30|/Date(372466800000)/
+Ashley|Young|Midfielder|Manchester United|27|/Date(489711600000)/
+Anderson|Oliveira|Midfielder|Manchester United|24|/Date(576889200000)/
+Ryan|Giggs|Midfielder|Manchester United|38|/Date(123379200000)/
+Dimitar|Berbatov|Forward|Manchester United|31|/Date(349660800000)/
+Scott|Wootton|Defender|Manchester United|21|/Date(684630000000)/
+Michael|Williamson|Defender|Newcastle United|28|/Date(437097600000)/
+Demba|Ba|Forward|Newcastle United|27|/Date(485823600000)/
+Hatem|Ben Arfa|Midfielder|Newcastle United|25|/Date(542073600000)/
+Steve|Harper|Goalkeeper|Newcastle United|37|/Date(163987200000)/
+Yohan|Cabaye|Midfielder|Newcastle United|26|/Date(506044800000)/
+Jonás|Gutiérrez|Midfielder|Newcastle United|29|/Date(426207600000)/
+Cheik Ismael|Tioté|Midfielder|Newcastle United|26|/Date(519692400000)/
+Tim|Krul|Goalkeeper|Newcastle United|24|/Date(576025200000)/
+Davide|Santon|Defender|Newcastle United|21|/Date(662774400000)/
+Steven|Taylor|Defender|Newcastle United|26|/Date(506822400000)/
+James|Tavernier|Defender|Newcastle United|20|/Date(688867200000)/
+Fabricio|Coloccini|Defender|Newcastle United|30|/Date(380505600000)/
+James|Perch|Defender|Newcastle United|27|/Date(496710000000)/
+Ryan|Taylor|Defender|Newcastle United|28|/Date(461718000000)/
+Shane|Ferguson|Defender|Newcastle United|21|/Date(679273200000)/
+Shola|Ameobi|Forward|Newcastle United|30|/Date(371689200000)/
+Gael|Bigirimana|Midfielder|Newcastle United|18|/Date(751244400000)/
+Danny|Simpson|Defender|Newcastle United|25|/Date(536716800000)/
+Vurnon|Anita|Midfielder|Newcastle United|23|/Date(607647600000)/
+Sylvain|Marveaux|Midfielder|Newcastle United|26|/Date(513903600000)/
+Gabriel|Obertan|Midfielder|Newcastle United|23|/Date(604454400000)/
+Papiss Demba|Cissé|Forward|Newcastle United|27|/Date(486601200000)/
+Dan|Gosling|Midfielder|Newcastle United|22|/Date(633916800000)/
+Jak|Alnwick|Goalkeeper|Newcastle United|19|/Date(740271600000)/
+Robert|Elliot|Goalkeeper|Newcastle United|26|/Date(515199600000)/
+Romain|Amalfitano|Midfielder|Newcastle United|23|/Date(620175600000)/
+Sammy|Ameobi|Forward|Newcastle United|20|/Date(704674800000)/
+Robert|Snodgrass|Forward|Norwich|25|/Date(557967600000)/
+Bradley|Johnson|Midfielder|Norwich|25|/Date(546562800000)/
+Leon|Barnett|Defender|Norwich|26|/Date(502156800000)/
+Russell|Martin|Defender|Norwich|26|/Date(505180800000)/
+Harry|Kane|Forward|Norwich|19|/Date(743814000000)/
+Grant|Holt|Forward|Norwich|31|/Date(355878000000)/
+Sébastien|Bassong|Defender|Norwich|26|/Date(521247600000)/
+Alexander|Tettey|Midfielder|Norwich|26|/Date(512953200000)/
+Jonathan|Howson|Midfielder|Norwich|24|/Date(580172400000)/
+Anthony|Pilkington|Midfielder|Norwich|24|/Date(581554800000)/
+Wes|Hoolahan|Midfielder|Norwich|30|/Date(390697200000)/
+Elliott|Bennett|Midfielder|Norwich|23|/Date(598406400000)/
+Javier|Garrido|Defender|Norwich|27|/Date(479692800000)/
+John|Ruddy|Goalkeeper|Norwich|25|/Date(530492400000)/
+Simeon|Jackson|Forward|Norwich|25|/Date(543888000000)/
+Andrew|Surman|Midfielder|Norwich|26|/Date(524876400000)/
+Steve|Morison|Forward|Norwich|29|/Date(430959600000)/
+Ryan|Bennett|Defender|Norwich|22|/Date(636681600000)/
+Chris|Martin|Forward|Norwich|23|/Date(594604800000)/
+Marc|Tierney|Defender|Norwich|27|/Date(493599600000)/
+Michael|Turner|Defender|Norwich|28|/Date(437184000000)/
+David|Fox|Midfielder|Norwich|28|/Date(440121600000)/
+Declan|Rudd|Goalkeeper|Norwich|21|/Date(663984000000)/
+James|Vaughan|Forward|Norwich|24|/Date(584838000000)/
+Mark|Bunn|Goalkeeper|Norwich|27|/Date(469411200000)/
+Simon|Lappin|Midfielder|Norwich|29|/Date(412300800000)/
+Adel|Taarabt|Midfielder|Queens Park Rangers|23|/Date(611967600000)/
+Ryan|Nelsen|Defender|Queens Park Rangers|34|/Date(245977200000)/
+Esteban|Granero|Midfielder|Queens Park Rangers|25|/Date(552178800000)/
+Stéphane|Mbia|Defender|Queens Park Rangers|26|/Date(516927600000)/
+Bobby|Zamora|Forward|Queens Park Rangers|31|/Date(348451200000)/
+Alejandro|Faurlin|Midfielder|Queens Park Rangers|26|/Date(526518000000)/
+Julio|César|Goalkeeper|Queens Park Rangers|33|/Date(305161200000)/
+Fabio Pereira|da Silva|Defender|Queens Park Rangers|22|/Date(647478000000)/
+Ji-Sung|Park|Midfielder|Queens Park Rangers|31|/Date(351907200000)/
+Anton|Ferdinand|Defender|Queens Park Rangers|27|/Date(477532800000)/
+Clint|Hill|Defender|Queens Park Rangers|33|/Date(277599600000)/
+Nedum|Onuoha|Defender|Queens Park Rangers|25|/Date(532137600000)/
+José|Bosingwa|Defender|Queens Park Rangers|30|/Date(398991600000)/
+Junior|Hoilett|Midfielder|Queens Park Rangers|22|/Date(644540400000)/
+Armand|Traore|Defender|Queens Park Rangers|23|/Date(623804400000)/
+Shaun|Wright-Phillips|Midfielder|Queens Park Rangers|30|/Date(372812400000)/
+Djibril|Cissé|Forward|Queens Park Rangers|31|/Date(366418800000)/
+Kieron|Dyer|Midfielder|Queens Park Rangers|33|/Date(283737600000)/
+Jamie|Mackie|Midfielder|Queens Park Rangers|27|/Date(496191600000)/
+Shaun|Derry|Midfielder|Queens Park Rangers|34|/Date(250214400000)/
+Andrew|Johnson|Forward|Queens Park Rangers|31|/Date(350611200000)/
+Samba|Diakité|Midfielder|Queens Park Rangers|23|/Date(601603200000)/
+Robert|Green|Goalkeeper|Queens Park Rangers|32|/Date(317001600000)/
+Brian|Murphy|Goalkeeper|Queens Park Rangers|29|/Date(421110000000)/
+Hogan|Ephraim|Midfielder|Queens Park Rangers|24|/Date(575766000000)/
+Max|Ehmer|Defender|Queens Park Rangers|20|/Date(697075200000)/
+Adrian|Mariappa|Defender|Reading|26|/Date(528678000000)/
+Jimmy|Kébé|Midfielder|Reading|28|/Date(443318400000)/
+Jobi|McAnuff|Midfielder|Reading|30|/Date(374112000000)/
+Kaspars|Gorkss|Defender|Reading|30|/Date(373852800000)/
+Nicky|Shorey|Defender|Reading|31|/Date(351388800000)/
+Shaun|Cummings|Defender|Reading|23|/Date(604368000000)/
+Alex|McCarthy|Goalkeeper|Reading|22|/Date(628646400000)/
+Noel|Hunt|Forward|Reading|29|/Date(409708800000)/
+Pavel|Pogrebnyak|Forward|Reading|28|/Date(437097600000)/
+Danny|Guthrie|Midfielder|Reading|25|/Date(545698800000)/
+Alex|Pearce|Defender|Reading|23|/Date(595036800000)/
+Jay|Tabb|Midfielder|Reading|28|/Date(446169600000)/
+Mikele|Leigertwood|Midfielder|Reading|29|/Date(405907200000)/
+Garath|McCleary|Midfielder|Reading|25|/Date(548031600000)/
+Jem|Karacan|Midfielder|Reading|23|/Date(604022400000)/
+Chris|Gunter|Defender|Reading|23|/Date(616978800000)/
+Hal|Robson-Kanu|Midfielder|Reading|23|/Date(611708400000)/
+Adam|Le Fondre|Forward|Reading|25|/Date(533865600000)/
+Ian|Harte|Defender|Reading|35|/Date(241830000000)/
+Jason|Roberts|Forward|Reading|34|/Date(254534400000)/
+Adam|Federici|Goalkeeper|Reading|27|/Date(475977600000)/
+Jake|Taylor|Midfielder|Reading|20|/Date(691545600000)/
+Simon|Church|Forward|Reading|23|/Date(597715200000)/
+Stuart|Taylor|Goalkeeper|Reading|31|/Date(344217600000)/
+Gastón|Ramírez|Midfielder|Southampton|21|/Date(660096000000)/
+Rickie|Lambert|Forward|Southampton|30|/Date(382665600000)/
+Adam|Lallana|Midfielder|Southampton|24|/Date(579222000000)/
+Morgan|Schneiderlin|Midfielder|Southampton|22|/Date(626486400000)/
+Maya|Yoshida|Defender|Southampton|24|/Date(588380400000)/
+Jason|Puncheon|Midfielder|Southampton|26|/Date(520124400000)/
+Steven|Davis|Midfielder|Southampton|27|/Date(473385600000)/
+Kelvin|Davis|Goalkeeper|Southampton|36|/Date(212799600000)/
+Jose|Fonte|Defender|Southampton|28|/Date(440899200000)/
+Nathaniel|Clyne|Defender|Southampton|21|/Date(670806000000)/
+Paulo|Gazzaniga|Goalkeeper|Southampton|20|/Date(694310400000)/
+Frazer|Richardson|Defender|Southampton|29|/Date(404694000000)/
+Daniel|Fox|Defender|Southampton|26|/Date(517705200000)/
+James|Ward-Prowse|Midfielder|Southampton|17|/Date(783648000000)/
+Guilherme|Do Prado|Forward|Southampton|30|/Date(378604800000)/
+Emmanuel|Mayuka|Forward|Southampton|21|/Date(659145600000)/
+Jay|Rodriguez|Forward|Southampton|23|/Date(617670000000)/
+Jos|Hooiveld|Defender|Southampton|29|/Date(419814000000)/
+Ben|Reeves|Defender|Southampton|20|/Date(690508800000)/
+Richard|Chaplow|Midfielder|Southampton|27|/Date(476150400000)/
+Billy|Sharp|Forward|Southampton|26|/Date(507945600000)/
+Daniel|Seaborne|Defender|Southampton|25|/Date(541900800000)/
+Luke|Shaw|Defender|Southampton|17|/Date(805503600000)/
+Tadanari|Lee|Forward|Southampton|26|/Date(503798400000)/
+Peter|Crouch|Forward|Stoke|31|/Date(349660800000)/
+Ryan|Shawcross|Defender|Stoke|25|/Date(560300400000)/
+Geoff|Cameron|Defender|Stoke|27|/Date(489884400000)/
+Marc|Wilson|Defender|Stoke|25|/Date(556153200000)/
+Robert|Huth|Defender|Stoke|28|/Date(461631600000)/
+Steven|N'Zonzi|Midfielder|Stoke|23|/Date(598147200000)/
+Asmir|Begovic|Goalkeeper|Stoke|25|/Date(551142000000)/
+Jonathan|Walters|Forward|Stoke|29|/Date(432860400000)/
+Glenn|Whelan|Midfielder|Stoke|28|/Date(442800000000)/
+Michael|Kightly|Midfielder|Stoke|26|/Date(506908800000)/
+Jermaine|Pennant|Midfielder|Stoke|29|/Date(411436800000)/
+Andy|Wilkinson|Defender|Stoke|28|/Date(460594800000)/
+Charlie|Adam|Midfielder|Stoke|26|/Date(503020800000)/
+Matthew|Etherington|Midfielder|Stoke|31|/Date(366591600000)/
+Kenwyne|Jones|Forward|Stoke|28|/Date(465778800000)/
+Dean|Whitehead|Midfielder|Stoke|30|/Date(380419200000)/
+Ryan|Shotton|Defender|Stoke|23|/Date(594169200000)/
+Wilson|Palacios|Midfielder|Stoke|28|/Date(459903600000)/
+Cameron|Jerome|Forward|Stoke|25|/Date(529628400000)/
+Michael|Owen|Forward|Stoke|32|/Date(313977600000)/
+Rory|Delap|Midfielder|Stoke|36|/Date(205455600000)/
+Maurice|Edu|Midfielder|Stoke|26|/Date(514162800000)/
+Jamie|Ness|Midfielder|Stoke|21|/Date(667872000000)/
+Matthew|Upson|Defender|Stoke|33|/Date(293238000000)/
+Thomas|Sørensen|Goalkeeper|Stoke|36|/Date(203382000000)/
+Kieran|Richardson|Midfielder|Sunderland|27|/Date(467161200000)/
+Steven|Fletcher|Forward|Sunderland|25|/Date(543715200000)/
+Sebastian|Larsson|Midfielder|Sunderland|27|/Date(486860400000)/
+Simon|Mignolet|Goalkeeper|Sunderland|24|/Date(573609600000)/
+Craig|Gardner|Midfielder|Sunderland|25|/Date(533260800000)/
+Lee|Cattermole|Midfielder|Sunderland|24|/Date(574905600000)/
+Danny|Rose|Defender|Sunderland|22|/Date(646873200000)/
+Titus|Bramble|Defender|Sunderland|31|/Date(365382000000)/
+James|McClean|Midfielder|Sunderland|23|/Date(609202800000)/
+John|O'Shea|Defender|Sunderland|31|/Date(357433200000)/
+Carlos|Cuéllar|Defender|Sunderland|31|/Date(367369200000)/
+Jack|Colback|Midfielder|Sunderland|22|/Date(625186800000)/
+Ahmed|Elmohamady|Midfielder|Sunderland|25|/Date(558140400000)/
+Stéphane|Sessegnon|Midfielder|Sunderland|28|/Date(454892400000)/
+David|Meyler|Midfielder|Sunderland|23|/Date(612399600000)/
+David|Vaughan|Midfielder|Sunderland|29|/Date(414374400000)/
+Adam|Johnson|Midfielder|Sunderland|25|/Date(553215600000)/
+Louis|Saha|Forward|Sunderland|34|/Date(271378800000)/
+Fraizer|Campbell|Forward|Sunderland|25|/Date(558486000000)/
+Connor|Wickham|Forward|Sunderland|19|/Date(733532400000)/
+Dong-Won|Ji|Forward|Sunderland|21|/Date(675385200000)/
+Keiren|Westwood|Goalkeeper|Sunderland|27|/Date(467334000000)/
+Matthew|Kilgallon|Defender|Sunderland|28|/Date(442368000000)/
+Miguel|Pérez Cuesta|Midfielder|Swansea|26|/Date(511747200000)/
+José Manuel|Flores Moreno|Defender|Swansea|25|/Date(541987200000)/
+Angel|Rangel|Defender|Swansea|29|/Date(404607600000)/
+Wayne|Routledge|Midfielder|Swansea|27|/Date(473904000000)/
+Ashley|Williams|Defender|Swansea|28|/Date(462063600000)/
+Scott|Sinclair|Midfielder|Swansea|23|/Date(606787200000)/
+Neil|Taylor|Defender|Swansea|23|/Date(602812800000)/
+Nathan|Dyer|Midfielder|Swansea|24|/Date(565142400000)/
+Sung-Yueng|Ki|Midfielder|Swansea|23|/Date(609375600000)/
+Leon|Britton|Midfielder|Swansea|30|/Date(400978800000)/
+Jonathan|De Guzmán|Midfielder|Swansea|25|/Date(558486000000)/
+Alan|Tate|Defender|Swansea|30|/Date(399769200000)/
+Michel|Vorm|Goalkeeper|Swansea|28|/Date(435452400000)/
+Ben|Davies|Defender|Swansea|19|/Date(735606000000)/
+Danny|Graham|Forward|Swansea|27|/Date(492649200000)/
+Kemy|Agustien|Midfielder|Swansea|26|/Date(524876400000)/
+Luke|Moore|Forward|Swansea|26|/Date(508636800000)/
+Pablo|Hernández|Midfielder|Swansea|27|/Date(482022000000)/
+Mark|Gower|Midfielder|Swansea|34|/Date(276390000000)/
+Itay|Shechter|Forward|Swansea|25|/Date(540950400000)/
+Ashley|Richards|Midfielder|Swansea|21|/Date(671410800000)/
+Dwight|Tiendalli|Defender|Swansea|26|/Date(498697200000)/
+Garry|Monk|Defender|Swansea|33|/Date(289526400000)/
+Gerhard|Tremmel|Goalkeeper|Swansea|33|/Date(280022400000)/
+Stephen|Dobbie|Forward|Swansea|29|/Date(407894400000)/
+Zoltán|Gera|Midfielder|West Bromwich Albion|33|/Date(293583600000)/
+Claudio|Yacob|Midfielder|West Bromwich Albion|25|/Date(553561200000)/
+James|Morrison|Midfielder|West Bromwich Albion|26|/Date(517359600000)/
+Gareth|McAuley|Defender|West Bromwich Albion|32|/Date(313200000000)/
+Jonas|Olsson|Defender|West Bromwich Albion|29|/Date(416102400000)/
+Shane|Long|Forward|West Bromwich Albion|25|/Date(538272000000)/
+Liam|Ridgewell|Defender|West Bromwich Albion|28|/Date(459212400000)/
+Youssuf|Mulumbu|Midfielder|West Bromwich Albion|25|/Date(538531200000)/
+Gonzalo|Jara|Defender|West Bromwich Albion|27|/Date(494118000000)/
+Ben|Foster|Goalkeeper|West Bromwich Albion|29|/Date(418172400000)/
+Goran|Popov|Defender|West Bromwich Albion|28|/Date(465519600000)/
+Peter|Odemwingie|Forward|West Bromwich Albion|31|/Date(363999600000)/
+Romelu|Lukaku|Forward|West Bromwich Albion|19|/Date(737247600000)/
+Steven|Reid|Defender|West Bromwich Albion|31|/Date(353030400000)/
+Chris|Brunt|Midfielder|West Bromwich Albion|27|/Date(471830400000)/
+Billy|Jones|Defender|West Bromwich Albion|25|/Date(543542400000)/
+Graham|Dorrans|Midfielder|West Bromwich Albion|25|/Date(547167600000)/
+Gabriel|Tamas|Defender|West Bromwich Albion|28|/Date(437184000000)/
+Markus|Rosenberg|Forward|West Bromwich Albion|30|/Date(401929200000)/
+Marc-Antoine|Fortuné|Forward|West Bromwich Albion|31|/Date(362876400000)/
+Boaz|Myhill|Goalkeeper|West Bromwich Albion|29|/Date(405648000000)/
+Craig|Dawson|Defender|West Bromwich Albion|22|/Date(641948400000)/
+Luke|Daniels|Goalkeeper|West Bromwich Albion|24|/Date(568339200000)/
+Yassine|El Ghanassy|Midfielder|West Bromwich Albion|22|/Date(647737200000)/
+Andy|Carroll|Forward|West Ham|23|/Date(600048000000)/
+Mohamed|Diamé|Midfielder|West Ham|25|/Date(550623600000)/
+Mark|Noble|Midfielder|West Ham|25|/Date(547426800000)/
+Ricardo|Vaz Te|Forward|West Ham|26|/Date(528505200000)/
+James|Collins|Defender|West Ham|29|/Date(430441200000)/
+Winston|Reid|Defender|West Ham|24|/Date(583887600000)/
+Jussi|Jääskeläinen|Goalkeeper|West Ham|37|/Date(167094000000)/
+Kevin|Nolan|Midfielder|West Ham|30|/Date(393721200000)/
+Joey|O'Brien|Defender|West Ham|26|/Date(508982400000)/
+Guy|Demel|Defender|West Ham|31|/Date(361234800000)/
+Matthew|Taylor|Midfielder|West Ham|30|/Date(375667200000)/
+George|McCartney|Defender|West Ham|31|/Date(357346800000)/
+Matthew|Jarvis|Midfielder|West Ham|26|/Date(517100400000)/
+James|Tomkins|Defender|West Ham|23|/Date(607129200000)/
+Modibo|Maiga|Forward|West Ham|26|/Date(526086000000)/
+Carlton|Cole|Forward|West Ham|28|/Date(437443200000)/
+Alou|Diarra|Midfielder|West Ham|31|/Date(363999600000)/
+Yossi|Benayoun|Midfielder|West Ham|32|/Date(326329200000)/
+Robert|Hall|Forward|West Ham|18|/Date(751071600000)/
+Gary|O'Neil|Midfielder|West Ham|29|/Date(422060400000)/
+Nicky|Maynard|Forward|West Ham|25|/Date(534643200000)/
+Stephen|Henderson|Goalkeeper|West Ham|24|/Date(578530800000)/
+Antolin|Alcaraz|Defender|Wigan|30|/Date(396831600000)/
+James|McArthur|Midfielder|Wigan|25|/Date(560559600000)/
+Franco|Di Santo|Forward|Wigan|23|/Date(607906800000)/
+Arouna|Koné|Forward|Wigan|28|/Date(437356800000)/
+Shaun|Maloney|Midfielder|Wigan|29|/Date(412214400000)/
+Ali|Al-Habsi|Goalkeeper|Wigan|30|/Date(378518400000)/
+Iván|Ramis|Defender|Wigan|27|/Date(467506800000)/
+Emmerson|Boyce|Defender|Wigan|33|/Date(306975600000)/
+Maynor|Figueroa|Defender|Wigan|29|/Date(420678000000)/
+James|McCarthy|Midfielder|Wigan|21|/Date(658368000000)/
+Gary|Caldwell|Defender|Wigan|30|/Date(387414000000)/
+Victor|Moses|Forward|Wigan|21|/Date(660960000000)/
+Jean|Beausejour|Midfielder|Wigan|28|/Date(454892400000)/
+David|Jones|Midfielder|Wigan|27|/Date(468374400000)/
+Jordi|Gómez García-Penche|Midfielder|Wigan|27|/Date(485737200000)/
+Ben|Watson|Midfielder|Wigan|27|/Date(489711600000)/
+Callum|McManaman|Forward|Wigan|21|/Date(672534000000)/
+Ryo|Miyaichi|Midfielder|Wigan|19|/Date(724291200000)/
+Mauro|Boselli|Forward|Wigan|27|/Date(485564400000)/
+Albert|Crusat|Midfielder|Wigan|30|/Date(390092400000)/
+Michael|Pollitt|Goalkeeper|Wigan|40|/Date(68169600000)/
