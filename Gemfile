@@ -32,6 +32,8 @@ end
 
 gem 'apipie-rails'
 gem 'jquery-rails'
+gem 'rest-client'
+gem "oauth-plugin", "~> 0.4.0"
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
