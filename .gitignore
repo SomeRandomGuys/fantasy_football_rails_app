@@ -12,7 +12,30 @@
 
 # Ignore ecliple/Aptana files
 /.settings
+/.project
 
 # Ignore all logfiles and tempfiles.
 /log/*.log
 /tmp
+
+# Compiled source
+*.com
+*.class
+*.dll
+*.exe
+*.o
+*.so
+*.pyc
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+Icon?
+ehthumbs.db
+Thumbs.db
+
+# Temporary files from vim
+.*.swp

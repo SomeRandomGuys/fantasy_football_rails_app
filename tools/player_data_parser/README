@@ -1,0 +1,11 @@
+This tool grabs player data from the match report presented on
+http://www.whoscored.com. Currently the user needs to provide a path to the
+'Match Center'>'Player Statistics' page of any given game. The parser output is
+a dictionary keyed by the uid of the player which points to a further
+subdictionary consisting of the players stats.
+
+Usage:
+  $ python get_player_stats.py -u <uri> -u <another_uri>
+
+Tests:
+  All tests depend on the python mox module (http://code.google.com/p/pymox/)
