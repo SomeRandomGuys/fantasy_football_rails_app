@@ -35,14 +35,23 @@ class ApiController < ApplicationController
     api_response = { :success => false, :error => nil, :return => nil }
 
     begin
+
     # Validate Player and Match data exists
-      player = Player.find_by_name_and_team!(params[:player_attrs][:first_name], params[:player_attrs][:last_name], params[:player_attrs][:team])
-      match = Match.find!(params[:match_player_stats][:match_id])
+      home_team = Team.find_by_name!(params[:match_player_stats][:home_team][:team_name])
+      away_team = Team.find_by_name!(params[:match_player_stats][:away_team][:team_name])
+      match = Match.find_by_id_and_home_team_id_and_away_team_id!(params[:match_player_stats][:match_id], home_team.id, away_team.id)
 
-      # Write to match_player_stats table
-      api_response[:return] = MatchPlayerStats.where(:player_id => player.id, :match_id => match.id ).find_or_create!(params[:player_attrs])
-      api_response[:success] = true
+      ["home_team","away_team"].each do |team|
+        player_stats = params[:match_player_stats][team][:player_attrs]
 
+        player_stats.each do |stats|
+          player = Player.find_by_name_and_team!(stats[:first_name], stats[:last_name], stats[:team])
+
+          # Write to match_player_stats table
+          api_response[:return] = MatchPlayerStats.where( :player_id => player.id, :match_id => match.id ).find_or_create!(params[:player_attrs])
+          api_response[:success] = true
+        end
+      end
     rescue Exception => e
       api_response[:error] = e.message
       api_response[:return] = nil
@@ -72,11 +81,11 @@ class ApiController < ApplicationController
     begin
       home_team = Team.find_by_name!(params[:new_match][:home_team])
       away_team = Team.find_by_name!(params[:new_match][:away_team])
-      
+
       api_response[:return] = Match.where(:home_team_id => home_team.id, :away_team_id => away_team.id,
-              :match_date => params[:new_match][:match_date]).first_or_create!(:home_score => params[:new_match][:home_score],
-              :away_score => params[:new_match][:away_score])
-      
+      :match_date => params[:new_match][:match_date]).first_or_create!(:home_score => params[:new_match][:home_score],
+      :away_score => params[:new_match][:away_score])
+
       api_response[:success] = true
     rescue Exception => e
       api_response[:error] = e.message
@@ -97,9 +106,11 @@ class ApiController < ApplicationController
   api :GET, "/:id.json", "Show Team stats for a Match"
 
   def show
-    @@api_response[:return] = MatchTeamStats.find(params[:id])
-    @@api_response[:success] = true
-    render :json => @@api_response
+    api_response = { :success => false, :error => nil, :return => nil }
+
+    api_response[:return] = Match.find(params[:id])
+    api_response[:success] = true
+    render :json => api_response
   end
   ############################################################################################################################
 
