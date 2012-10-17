@@ -33,6 +33,7 @@ class MatchPlayerStats < ActiveRecord::Base
   
   has_many :matches
   has_many :players
+  after_initialize :init
   
   def self.weekly_player_stats(player_id, gameweek = GameWeeks.current_gameweek)
     matche_ids = Match.select(:id).matches_in_current_gameweek
@@ -41,19 +42,24 @@ class MatchPlayerStats < ActiveRecord::Base
 end
 
 
-# mins_played
-# 
-# 
-# goals_allowed / clean_sheet
-# tackles_fail (might not be used)
-# tackles_successful
-# passes_fail/passes_lost
-# passess_successful
-# 
-# shots_off_target
-# shots_saved
-# 
-# penalty_missed
-# penalty_saved
-# who_scored_rating (could be used for error correction - extra credit)
-# dribbles_lost
+def init
+	self.mins_played 		||= 0
+	self.goals_scored 		||= 0
+	self.goals_allowed      ||= 0
+	self.goal_assists       ||= 0
+	self.own_goals          ||= 0
+	self.red_card_count     ||= 0
+	self.yellow_card_count  ||= 0
+	self.tackles_fail       ||= 0
+	self.tackles_successful ||= 0
+	self.passes_fail        ||= 0
+	self.passess_successful ||= 0
+	self.shots_on_target    ||= 0
+	self.shots_off_target   ||= 0
+	self.shots_saved        ||= 0
+	self.penalty_scored     ||= 0
+	self.penalty_missed     ||= 0
+	self.penalty_saved      ||= 0
+	self.dribbles_lost      ||= 0
+	self.who_scored_rating  ||= 0
+end

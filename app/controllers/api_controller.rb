@@ -15,7 +15,7 @@ class ApiController < ApplicationController
     DOC
   end
 
-  ############################################################################################################################
+# API to write a record to match_team_stats
   api :POST, "/match_team_stats.json", "Write team stats for a match"
   description "NOT IMPLEMENTED"
   example 'NOT IMPLEMENTED'
@@ -23,12 +23,49 @@ class ApiController < ApplicationController
   def match_team_stats
 
   end
-  ############################################################################################################################
 
-  ############################################################################################################################
+
+# API to write multiple records to match_player_stats
   api :POST, "/match_player_stats.json", "Write player stats for a match"
-  description "NOT IMPLEMENTED"
-  example 'NOT IMPLEMENTED'
+  description "Use this method to write individual player stats for a match. Can called with a list of one or more players for both home and away teams. 
+  Refer to the example for details"
+  example <<-EX
+  {"match_player_stats":
+    {"match_id":1,
+      "away_team":
+          {"team_name":"Liverpool","players":
+              [{"first_name":"Steven","last_name":"Gerrard","stats":{"goals_scored":1}},
+               {"first_name":"Fabio","last_name":"Borini","stats":{"goals_scored":1}}]
+          },
+      "home_team":
+          {"team_name":"Arsenal","players":
+              [{"first_name":"Theo","last_name":"Walcott","stats":{"goals_scored":1}},
+               {"first_name":"Aaron","last_name":"Ramsey","stats":{"goals_scored":0}}]
+           }
+     }
+   }
+  EX
+  param :match_id          , Integer, :desc => "ID of match from new_match api", :required => true
+  param :team_name         , String,  :desc => "Name of the team. Applies to home_team and away_team", :required => true
+  param :mins_played       , Integer, :desc => "Minutes played", :required => false
+  param :goals_scored      , Integer, :desc => "Number of goals scored", :required => false
+  param :goals_allowed     , Integer, :desc => "Number of goals allowed by team", :required => false
+  param :goal_assists      , Integer, :desc => "Number of goals assisted on", :required => false
+  param :own_goals         , Integer, :desc => "Number of own goals by player", :required => false
+  param :red_card_count    , Integer, :desc => "Red cards issued", :required => false
+  param :yellow_card_count , Integer, :desc => "Yellow cards issued", :required => false
+  param :tackles_fail      , Integer, :desc => "Unsuccessful tackles", :required => false
+  param :tackles_successful, Integer, :desc => "Successful tackles", :required => false
+  param :passes_fail       , Integer, :desc => "Unsuccessful passes", :required => false
+  param :passess_successful, Integer, :desc => "Successful passes", :required => false
+  param :shots_on_target   , Integer, :desc => "Number of shots on target", :required => false
+  param :shots_off_target  , Integer, :desc => "Number of shots off target", :required => false
+  param :shots_saved       , Integer, :desc => "Shots saved (applies to goalkeepers)", :required => false
+  param :penalty_scored    , Integer, :desc => "Number of penalties scored", :required => false
+  param :penalty_missed    , Integer, :desc => "Number of penalties missed", :required => false
+  param :penalty_saved     , Integer, :desc => "Number of penalties saved (applies to goalkeepers)", :required => false
+  param :dribbles_lost     , Integer, :desc => "Numb of dribbles lost", :required => false 
+  param :who_scored_rating , Integer, :desc => "Bonus rating", :required => false
 
   def match_player_stats
 
@@ -41,14 +78,37 @@ class ApiController < ApplicationController
       away_team = Team.find_by_name!(params[:match_player_stats][:away_team][:team_name])
       match = Match.find_by_id_and_home_team_id_and_away_team_id!(params[:match_player_stats][:match_id], home_team.id, away_team.id)
 
-      ["home_team","away_team"].each do |team|
-        player_stats = params[:match_player_stats][team][:player_attrs]
-
-        player_stats.each do |stats|
-          player = Player.find_by_name_and_team!(stats[:first_name], stats[:last_name], stats[:team])
+      # Read player stats for both home and away team 
+      ["home_team", "away_team"].each do |team|
+        players = params[:match_player_stats][team][:players]
+        team_name = params[:match_player_stats][team][:team_name]
+        players.each do |player|
+          player_id = Player.find_by_name_and_team!(player[:first_name], player[:last_name], team_name).id
+          logger.info player[:stats][:goals_scored]
 
           # Write to match_player_stats table
-          api_response[:return] = MatchPlayerStats.where( :player_id => player.id, :match_id => match.id ).find_or_create!(params[:player_attrs])
+          api_response[:return] = MatchPlayerStats.where( :player_id => player_id, :match_id => match.id )\
+          .first_or_create!(:goals_scored       => player[:stats][:goals_scored],
+                            :mins_played        => player[:stats][:mins_played],
+                            :goals_scored       => player[:stats][:goals_scored],
+                            :goals_allowed      => player[:stats][:goals_allowed],
+                            :goal_assists       => player[:stats][:goals_assists],
+                            :own_goals          => player[:stats][:own_goals],
+                            :red_card_count     => player[:stats][:red_card_count],
+                            :yellow_card_count  => player[:stats][:yellow_card_count],
+                            :tackles_fail       => player[:stats][:tackles_fail],
+                            :tackles_successful => player[:stats][:tackles_successful],
+                            :passes_fail        => player[:stats][:passes_fail],
+                            :passess_successful => player[:stats][:passess_successful],
+                            :shots_on_target    => player[:stats][:shots_on_target],
+                            :shots_off_target   => player[:stats][:shots_off_target],
+                            :shots_saved        => player[:stats][:shots_saved],
+                            :penalty_scored     => player[:stats][:penalty_scored],
+                            :penalty_missed     => player[:stats][:penalty_missed],
+                            :penalty_saved      => player[:stats][:penalty_saved],
+                            :dribbles_lost      => player[:stats][:dribbles_lost],
+                            :who_scored_rating  => player[:stats][:who_scored_rating])
+
           api_response[:success] = true
         end
       end
@@ -60,9 +120,9 @@ class ApiController < ApplicationController
 
     render :json => api_response
   end
-  ############################################################################################################################
 
-  ############################################################################################################################
+
+# API to write a new record to match
   api :POST, "/new_match.json", "Create entry for a weekly matchup"
   param :home_team, String, :desc => "name of the home team.", :required => true
   param :away_team, String, :desc => "name of the away team.", :required => true
@@ -95,9 +155,8 @@ class ApiController < ApplicationController
 
     render :json => api_response
   end
-  ############################################################################################################################
 
-  ############################################################################################################################
+
   def index
     @match_stats = MatchTeamStats.all
     respond_with @match_stats
@@ -112,12 +171,17 @@ class ApiController < ApplicationController
     api_response[:success] = true
     render :json => api_response
   end
-  ############################################################################################################################
+
 
   private
 
   def authenticate
-    head :unauthorized unless params[:api_key] && params[:api_key] == "78237e4b292b20206e7b63635f"
+    if Rails.env.production?
+      head :unauthorized unless params[:api_key] && params[:api_key] == "78237e4b292b20206e7b63635f"
+    else
+      head :unauthorized unless params[:api_key] && params[:api_key] == "FakeApiKey"
+    end
+        
   end
 
 end
