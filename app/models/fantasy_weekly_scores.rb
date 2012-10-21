@@ -28,7 +28,7 @@ class FantasyWeeklyScores < ActiveRecord::Base
   def calc_total_score(fantasy_team_id, player_id)
     fantasy_league_id = FantasyTeam.find(fantasy_team_id).fantasy_league_id
     position_id = Player.find(payer_id).position_id
-    multipliers = FantasyScoreMultpliers.where("position_id = ? AND fantasy_league_id = ?", position_id, fantasy_league_id)
+    multipliers = FantasyScoreMultpliers.find_by_position_id_and_fantasy_league_id(position_id, fantasy_league_id)
     player_stats = MatchPlayerStats.weekly_player_stats(player_id)
     
     # calculate total score

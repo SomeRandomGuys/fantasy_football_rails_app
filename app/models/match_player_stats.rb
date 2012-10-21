@@ -29,16 +29,16 @@
 #
 
 class MatchPlayerStats < ActiveRecord::Base
-  #validates :shots, :presence => true
-  
-  has_many :matches
-  has_many :players
-  before_save :set_defaults
-  
-  def self.weekly_player_stats(player_id, gameweek = GameWeeks.current_gameweek)
-    matche_ids = Match.select(:id).matches_in_current_gameweek
-    where(:player_id => player_id, :match_id => match_ids).first
-  end
+	#validates :shots, :presence => true
+
+	has_many :matches
+	has_many :players
+	before_save :set_defaults
+
+	def self.weekly_player_stats(player_id, gameweek = GameWeeks.current_gameweek)
+		matche_ids = Match.select(:id).matches_in_current_gameweek
+		where(:player_id => player_id, :match_id => match_ids).first
+	end
 
 	def set_defaults
 
