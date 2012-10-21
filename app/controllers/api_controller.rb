@@ -87,6 +87,12 @@ class ApiController < ApplicationController
 
           match_player_stat_record = MatchPlayerStats.where(:player_id => player_id, :match_id => match.id).first_or_initialize
 
+          # Validate that all stats are integers
+          player[:stats].each do |key, value|
+            # logger.info ">>>>>>>>>#{player}[:#{key}] = #{value.class}"
+            raise StandardError, "#{key} for #{player[:first_name]} #{player[:last_name]} is not a Number" unless value.is_a? Integer
+          end
+
           # Write to match_player_stats table
           match_player_stat_record[:goals_scored]       = player[:stats][:goals_scored]
           match_player_stat_record[:mins_played]        = player[:stats][:mins_played]
