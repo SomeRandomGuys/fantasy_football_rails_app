@@ -30,11 +30,6 @@
 
 class MatchPlayerStats < ActiveRecord::Base
   #validates :shots, :presence => true
-
-  # attr_accessor :player_id, :created_at, :updated_at, :mins_played, :goals_scored, :goals_allowed, :goal_assists, 
-  # 				:own_goals, :red_card_count, :yellow_card_count, :tackles_fail, :tackles_successful, :passes_fail,
-		# 		:passess_successful, :shots_on_target, :shots_off_target, :shots_saved, :penalty_scored, :penalty_missed, 
-		# 		:penalty_saved, :dribbles_lost, :who_scored_rating 
   
   has_many :matches
   has_many :players
@@ -42,7 +37,7 @@ class MatchPlayerStats < ActiveRecord::Base
   
   def self.weekly_player_stats(player_id, gameweek = GameWeeks.current_gameweek)
     matche_ids = Match.select(:id).matches_in_current_gameweek
-    where(:player_id => player_id, :match_id => match_ids) 
+    where(:player_id => player_id, :match_id => match_ids).first
   end
 
 	def set_defaults

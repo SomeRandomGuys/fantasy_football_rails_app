@@ -11,11 +11,11 @@ class ApiController < ApplicationController
     version '1.0'
     formats ['json']
     description <<-DOC
-      Use methods described to create entries for weekly matchup as well as to write player and team stats
+    Use methods described to create entries for weekly matchup as well as to write player and team stats
     DOC
   end
 
-# API to write a record to match_team_stats
+  # API to write a record to match_team_stats
   api :POST, "/match_team_stats.json", "Write team stats for a match"
   description "NOT IMPLEMENTED"
   example 'NOT IMPLEMENTED'
@@ -25,7 +25,7 @@ class ApiController < ApplicationController
   end
 
 
-# API to write multiple records to match_player_stats
+  # API to write multiple records to match_player_stats
   api :POST, "/match_player_stats.json", "Write player stats for a match"
   description "Use this method to write individual player stats for a match. Can be called with a list of one or more players for both home and away teams. 
   Refer to the example for details"
@@ -33,17 +33,17 @@ class ApiController < ApplicationController
   {"match_player_stats":
     {"match_id":1,
       "away_team":
-          {"team_name":"Liverpool","players":
-              [{"first_name":"Steven","last_name":"Gerrard","stats":{"mins_played":90,"goals_scored":1,"shots_on_target":2}},
-               {"first_name":"Fabio","last_name":"Borini","stats":{"mins_played":78,"passes_fail":1}}]
+      {"team_name":"Liverpool","players":
+        [{"first_name":"Steven","last_name":"Gerrard","stats":{"mins_played":90,"goals_scored":1,"shots_on_target":2}},
+          {"first_name":"Fabio","last_name":"Borini","stats":{"mins_played":78,"passes_fail":1}}]
           },
-      "home_team":
+          "home_team":
           {"team_name":"Arsenal","players":
-              [{"first_name":"Theo","last_name":"Walcott","stats":{"mins_played":90,"goals_allowed":1,"yellow_card_count":1,"shots_on_target":2}},
-               {"first_name":"Aaron","last_name":"Ramsey","stats":{"mins_played":90,"goals_allowed":1,"tackles_successful":2}}]
-           }
-     }
-   }
+            [{"first_name":"Theo","last_name":"Walcott","stats":{"mins_played":90,"goals_allowed":1,"yellow_card_count":1,"shots_on_target":2}},
+              {"first_name":"Aaron","last_name":"Ramsey","stats":{"mins_played":90,"goals_allowed":1,"tackles_successful":2}}]
+            }
+          }
+        }
   EX
   param :match_id          , Integer, :desc => "ID of match from new_match api", :required => true
   param :team_name         , String,  :desc => "Name of the team. Applies to home_team and away_team", :required => true
@@ -73,7 +73,7 @@ class ApiController < ApplicationController
 
     begin
 
-    # Validate Player and Match data exists
+      # Validate Player and Match data exists
       home_team = Team.find_by_name!(params[:match_player_stats][:home_team][:team_name])
       away_team = Team.find_by_name!(params[:match_player_stats][:away_team][:team_name])
       match = Match.find_by_id_and_home_team_id_and_away_team_id!(params[:match_player_stats][:match_id], home_team.id, away_team.id)
@@ -120,17 +120,17 @@ class ApiController < ApplicationController
           api_response[:success] = true
         end
       end
-    rescue StandardError => e
-      api_response[:error] = e.message
-      api_response[:return] = nil
-      api_response[:success] = false
+      rescue StandardError => e
+        api_response[:error] = e.message
+        api_response[:return] = nil
+        api_response[:success] = false
     end
 
     render :json => api_response
   end
 
 
-# API to write a new record to match
+  # API to write a new record to match
   api :POST, "/new_match.json", "Create entry for a weekly matchup"
   param :home_team, String, :desc => "name of the home team.", :required => true
   param :away_team, String, :desc => "name of the away team.", :required => true
@@ -139,7 +139,7 @@ class ApiController < ApplicationController
   param :start_time, String, :desc => "Match start date time.", :required => true
   description "Use this method to create/find an entry for a match. A match entry has to be created before writing player stats"
   example "POST \'https://[domain]/api/new_match.json?api_key=[your_api_key]\' \nCONTENT-TYPE: application/json \n" +
-    '{"new_match":{"home_team":"Arsenal", "away_team":"Liverpool", "home_score":"3", "away_score":"1"}}'
+  '{"new_match":{"home_team":"Arsenal", "away_team":"Liverpool", "home_score":"3", "away_score":"1"}}'
 
   def new_match
 
@@ -151,17 +151,17 @@ class ApiController < ApplicationController
       away_team = Team.find_by_name!(params[:new_match][:away_team])
 
       api_response[:return] = Match.where(:home_team_id => home_team.id, :away_team_id => away_team.id,
-      :match_date => params[:new_match][:match_date]).first_or_create!(:home_score => params[:new_match][:home_score],
-      :away_score => params[:new_match][:away_score])
+        :match_date => params[:new_match][:match_date]).first_or_create!(:home_score => params[:new_match][:home_score],
+        :away_score => params[:new_match][:away_score])
 
-      api_response[:success] = true
-    rescue StandardError => e
-      api_response[:error] = e.message
-      api_response[:success] = false
-      api_response[:return] = nil
-    end
+        api_response[:success] = true
+      rescue StandardError => e
+        api_response[:error] = e.message
+        api_response[:success] = false
+        api_response[:return] = nil
+      end
 
-    render :json => api_response
+      render :json => api_response
   end
 
 
@@ -189,7 +189,7 @@ class ApiController < ApplicationController
     else
       head :unauthorized unless params[:api_key] && params[:api_key] == "FakeApiKey"
     end
-        
+
   end
 
 end

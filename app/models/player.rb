@@ -42,7 +42,8 @@ class Player < ActiveRecord::Base
     begin
       player = find_by_first_name_and_last_name_and_team_id!(first_name, last_name, team.id)
     rescue ActiveRecord::RecordNotFound => e
-      raise ActiveRecord::RecordNotFound, "Couldn't find Player with first_name = #{first_name}, last_name = #{last_name}, team_name = #{team_name}"
+      raise ActiveRecord::RecordNotFound, 
+          "Couldn't find Player with first_name = #{first_name}, last_name = #{last_name}, team_name = #{team_name}"
     end
   end
 end
