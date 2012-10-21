@@ -27,20 +27,20 @@ class ApiController < ApplicationController
 
 # API to write multiple records to match_player_stats
   api :POST, "/match_player_stats.json", "Write player stats for a match"
-  description "Use this method to write individual player stats for a match. Can called with a list of one or more players for both home and away teams. 
+  description "Use this method to write individual player stats for a match. Can be called with a list of one or more players for both home and away teams. 
   Refer to the example for details"
   example <<-EX
   {"match_player_stats":
     {"match_id":1,
       "away_team":
           {"team_name":"Liverpool","players":
-              [{"first_name":"Steven","last_name":"Gerrard","stats":{"goals_scored":1}},
-               {"first_name":"Fabio","last_name":"Borini","stats":{"goals_scored":1}}]
+              [{"first_name":"Steven","last_name":"Gerrard","stats":{"mins_played":90,"goals_scored":1,"shots_on_target":2}},
+               {"first_name":"Fabio","last_name":"Borini","stats":{"mins_played":78,"passes_fail":1}}]
           },
       "home_team":
           {"team_name":"Arsenal","players":
-              [{"first_name":"Theo","last_name":"Walcott","stats":{"goals_scored":1}},
-               {"first_name":"Aaron","last_name":"Ramsey","stats":{"goals_scored":0}}]
+              [{"first_name":"Theo","last_name":"Walcott","stats":{"mins_played":90,"goals_allowed":1,"yellow_card_count":1,"shots_on_target":2}},
+               {"first_name":"Aaron","last_name":"Ramsey","stats":{"mins_played":90,"goals_allowed":1,"tackles_successful":2}}]
            }
      }
    }
@@ -84,35 +84,37 @@ class ApiController < ApplicationController
         team_name = params[:match_player_stats][team][:team_name]
         players.each do |player|
           player_id = Player.find_by_name_and_team!(player[:first_name], player[:last_name], team_name).id
-          logger.info player[:stats][:goals_scored]
+
+          match_player_stat_record = MatchPlayerStats.where(:player_id => player_id, :match_id => match.id).first_or_initialize
 
           # Write to match_player_stats table
-          api_response[:return] = MatchPlayerStats.where( :player_id => player_id, :match_id => match.id )\
-          .first_or_create!(:goals_scored       => player[:stats][:goals_scored],
-                            :mins_played        => player[:stats][:mins_played],
-                            :goals_scored       => player[:stats][:goals_scored],
-                            :goals_allowed      => player[:stats][:goals_allowed],
-                            :goal_assists       => player[:stats][:goals_assists],
-                            :own_goals          => player[:stats][:own_goals],
-                            :red_card_count     => player[:stats][:red_card_count],
-                            :yellow_card_count  => player[:stats][:yellow_card_count],
-                            :tackles_fail       => player[:stats][:tackles_fail],
-                            :tackles_successful => player[:stats][:tackles_successful],
-                            :passes_fail        => player[:stats][:passes_fail],
-                            :passess_successful => player[:stats][:passess_successful],
-                            :shots_on_target    => player[:stats][:shots_on_target],
-                            :shots_off_target   => player[:stats][:shots_off_target],
-                            :shots_saved        => player[:stats][:shots_saved],
-                            :penalty_scored     => player[:stats][:penalty_scored],
-                            :penalty_missed     => player[:stats][:penalty_missed],
-                            :penalty_saved      => player[:stats][:penalty_saved],
-                            :dribbles_lost      => player[:stats][:dribbles_lost],
-                            :who_scored_rating  => player[:stats][:who_scored_rating])
+          match_player_stat_record[:goals_scored]       = player[:stats][:goals_scored]
+          match_player_stat_record[:mins_played]        = player[:stats][:mins_played]
+          match_player_stat_record[:goals_scored]       = player[:stats][:goals_scored]
+          match_player_stat_record[:goals_allowed]      = player[:stats][:goals_allowed]
+          match_player_stat_record[:goal_assists]       = player[:stats][:goals_assists]
+          match_player_stat_record[:own_goals]          = player[:stats][:own_goals]
+          match_player_stat_record[:red_card_count]     = player[:stats][:red_card_count]
+          match_player_stat_record[:yellow_card_count]  = player[:stats][:yellow_card_count]
+          match_player_stat_record[:tackles_fail]       = player[:stats][:tackles_fail]
+          match_player_stat_record[:tackles_successful] = player[:stats][:tackles_successful]
+          match_player_stat_record[:passes_fail]        = player[:stats][:passes_fail]
+          match_player_stat_record[:passess_successful] = player[:stats][:passess_successful]
+          match_player_stat_record[:shots_on_target]    = player[:stats][:shots_on_target]
+          match_player_stat_record[:shots_off_target]   = player[:stats][:shots_off_target]
+          match_player_stat_record[:shots_saved]        = player[:stats][:shots_saved]
+          match_player_stat_record[:penalty_scored]     = player[:stats][:penalty_scored]
+          match_player_stat_record[:penalty_missed]     = player[:stats][:penalty_missed]
+          match_player_stat_record[:penalty_saved]      = player[:stats][:penalty_saved]
+          match_player_stat_record[:dribbles_lost]      = player[:stats][:dribbles_lost]
+          match_player_stat_record[:who_scored_rating]  = player[:stats][:who_scored_rating]
+
+          api_response[:return] = match_player_stat_record.save!
 
           api_response[:success] = true
         end
       end
-    rescue Exception => e
+    rescue StandardError => e
       api_response[:error] = e.message
       api_response[:return] = nil
       api_response[:success] = false
@@ -147,7 +149,7 @@ class ApiController < ApplicationController
       :away_score => params[:new_match][:away_score])
 
       api_response[:success] = true
-    rescue Exception => e
+    rescue StandardError => e
       api_response[:error] = e.message
       api_response[:success] = false
       api_response[:return] = nil
