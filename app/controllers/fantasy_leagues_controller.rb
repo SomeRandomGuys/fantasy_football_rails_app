@@ -6,8 +6,8 @@ class FantasyLeaguesController < ApplicationController
     if @fantasy_league.save
       @fantasy_league.reload
       # ----TO DO ----
-      # Create default score multpliers
-      FantasyScoreMultpliers.create_default_scoring_for_fantasy_league(@fantasy_league.id)
+      # Create default score multipliers
+      FantasyScoreMultipliers.create_default_scoring_for_fantasy_league(@fantasy_league.id)
       redirect_to :show
     else
       flash[:error] = "Error during league creation"

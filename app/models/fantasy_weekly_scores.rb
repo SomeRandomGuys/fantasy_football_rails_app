@@ -14,18 +14,24 @@
 class FantasyWeeklyScores < ActiveRecord::Base
   
   has_many :fantasy_teams
+  has_many :players
+  has_many :game_weeks
   
   def self.update_weekly_scores
-    fantasy_players = self.where("game_week_id = ? AND total_score is NULL", GameWeeks.current_gameweek.id)
+    fantasy_players = all #find_all_by_game_week_id_and_total_score(GameWeeks.current_gameweek.id, nil)
     fantasy_players.each do |player|
       player.total_score = calc_total_score(player.fantasy_team_id, player.player_id)
       player.save 
     end 
   end
   
+  # def self.test_calc_total_score(fantasy_team_id, player_id)
+  #   calc_total_score(fantasy_team_id, player_id)
+  # end
+
   private  
   
-  def calc_total_score(fantasy_team_id, player_id)
+  def self.calc_total_score(fantasy_team_id, player_id)
     fantasy_league_id = FantasyTeam.find(fantasy_team_id).fantasy_league_id
     position_id = Player.find(payer_id).position_id
     multipliers = FantasyScoreMultpliers.find_by_position_id_and_fantasy_league_id(position_id, fantasy_league_id)

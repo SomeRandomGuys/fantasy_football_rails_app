@@ -14,7 +14,7 @@
 class FantasyManagers < ActiveRecord::Base
   
   validates :name, :presence => true
-  validates :league_id, :presence => true
+  validates :fantasy_league_id, :presence => true
   belongs_to :user_fantasy_manager
   
   def league_name(id)

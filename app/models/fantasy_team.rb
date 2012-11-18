@@ -14,7 +14,9 @@
 
 class FantasyTeam < ActiveRecord::Base
   
-  belongs_to :player
+  belongs_to :fantasy_weekly_scores
+  has_many :players
+  has_many :fantasy_managers
   
   def self.fantasy_team_by_manager_id(fantasy_manager_id)
     #@fantasy_team = joins(:player, :position).where("fantasy_manager_id = ? and active_flg = 1", fantasy_manager_id).includes(:player, :position)

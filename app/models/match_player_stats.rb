@@ -29,7 +29,7 @@
 #
 
 class MatchPlayerStats < ActiveRecord::Base
-	#validates :shots, :presence => true
+	# validates :shots, :presence => true
 
 	has_many :matches
 	has_many :players

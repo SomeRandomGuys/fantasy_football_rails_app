@@ -19,7 +19,7 @@ test:
   username: postgres
   password: oracle
   host: localhost
-  
+
 
 # production:
   # adapter: sqlite3
