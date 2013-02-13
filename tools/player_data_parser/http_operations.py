@@ -1,29 +1,26 @@
-"""HTTP Operations helper class.
-"""
+"""A set of HTTP operations helper classes."""
 
 __author__ = 'akshaylal@gmail.com'
 
 import httplib
 import logging
 
-# In seconds.
-HTTP_TIMEOUT = 60
-WHO_SCORED_URL = 'www.whoscored.com'
+import common
 
 
 class HTTPOperationsException(Exception):
   pass
 
 
-class HTTPOperations(object):
-  """Handles all the HTTP operations."""
+class HTTPDataScraper(object):
+  """Handles scraping of raw html data."""
 
   def __init__(self, uri):
     self.uri = uri
     self.connection = ''
     if not self._CreateConnection():
       raise HTTPOperationsException(
-          'Failed to create an HTTP connection to %s' % WHO_SCORED_URL)
+          'Failed to create an HTTP connection to %s' % common.WHO_SCORED_URL)
 
   def _CreateConnection(self):
     """Creates an HTTPConnection object.
@@ -34,9 +31,10 @@ class HTTPOperations(object):
       True on success else False.
     """
     try:
-      self.connection = httplib.HTTPConnection(WHO_SCORED_URL)
+      self.connection = httplib.HTTPConnection(common.WHO_SCORED_URL)
     except httplib.InvalidURL, e:
-      logging.error('Connection to %s failed. Error: %s', WHO_SCORED_URL, e)
+      logging.error('Connection to %s failed. Error: %s',
+                    common.WHO_SCORED_URL, e)
       return False
 
     return True
@@ -49,7 +47,7 @@ class HTTPOperations(object):
   def GetPageContent(self):
     """
     """
-    page_path = self.uri.split(WHO_SCORED_URL)[-1]
+    page_path = self.uri.split(common.WHO_SCORED_URL)[-1]
     data = ''
 
     try:

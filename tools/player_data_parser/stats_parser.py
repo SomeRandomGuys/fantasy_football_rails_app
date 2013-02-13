@@ -1,27 +1,61 @@
-"""A parser for player data.
-"""
+"""A parser for player data."""
 
 __author__ = 'akshaylal@gmail.com'
 
+import datetime
 import json
 import logging
 import re
-import unicodedata
+
+import common
+import rest_operations
 
 SPLIT_ON_STRING = 'var initialData = '
+LENGTH_PLAYER_STATS_LIST = 13
+
+class InvalidPlayerStatsException(Exception):
+  pass
 
 
-class PlayerDataParser(object):
+class StatsParser(object):
   """Parse an html page for player statistics."""
 
-  def __init__(self):
+  def __init__(self, rest_ops_obj):
+    assert rest_ops_obj
     self.player_stats_map = {}
     self.json_list = None
+    self.rest_ops_obj = rest_ops_obj
+    self.home_team = ""
+    self.away_team = ""
+    self.Reset()
 
   def Reset(self):
     """Resets all data in the player_stats_map & json_list."""
     self.player_stats_map = {}
     self.json_list = None
+
+  def StorePlayerDataToBackend(self, html_data):
+    """Stores the player_stats_map to the backend.
+
+    Args:
+      html_data: the raw html_data.
+
+    Returns:
+      True on success, else False.
+    """
+    assert self.rest_ops_obj
+    assert html_data
+
+    # Step 1: Parse the html data, generate a match id & update
+    # self.player_stats_map
+    self.ParsePlayerData(html_data)
+
+    # Step 2: Update the backend with the player stats.
+    self.rest_ops_obj.StorePlayerStats(self.match_id,
+                                       self.player_stats_map)
+
+    logging.info('Player stats for match_id: %d, stored successfully to '
+                 'backend.', self.match_id)
 
   def ParsePlayerData(self, html_data):
     """Parse the player data from html page & update self.player_stats_map.
@@ -38,21 +72,83 @@ class PlayerDataParser(object):
 
     # At this point the parsed json_list has 2 elements.
     # 0: a list of lists contains all the stats we need/want.
-    # 1: the integer 0 (not sure why.).
+    # 1: the integer 0 (not sure why).
     #
     # Within the first element heres how the stats are laied out:
     # 0: a list containing the summary about the game.
     # 1: a list of lists containing all the stats about the game.
     #
-    # We ideally care more about the second element at this point since all the
-    # stats we really need are in there.
+    # From the first list we would like to gather the following stats:
+    # a. home team name.
+    # b. away team name.
+    # c. home score.
+    # d. away score.
+    # e. date the game was played (UTC date).
+    (self.home_team, self.away_team, home_score, away_score,
+     match_date) = self._ParseMatchMetaData(self.json_list[0][0])
+
+    # Before parsing any data lets first get a new match_id.
+    self.match_id = self.rest_ops_obj.GetMatchId(
+        self.home_team, home_score, self.away_team, away_score,
+        datetime.datetime.strftime(match_date, '%Y/%m/%d %H:%M:%S'))
+    logging.info('New match id: %s', self.match_id)
+
+    self.player_stats_map['away_team'] = {'team_name': self.away_team,
+                                          'players': []}
+    self.player_stats_map['home_team'] = {'team_name': self.home_team,
+                                          'players': []}
+
+    # All the player stats we really need are part of the second element. This
+    # contains:
     # 0: a list of lists containing stats for the home team/players.
     # 1: a list of lists containing stats for the away team/players.
     for stats in self.json_list[0][1]:
-      if not self._ParseStats(stats):
-        return False
+      (who_scored_team_name,
+       player_stats_list) = self._ParseStats(stats)
+
+      # Put the player stats into the correct location (team) in
+      if who_scored_team_name == self.home_team:
+        self.player_stats_map['home_team'].update(
+            {'players': player_stats_list})
+      elif who_scored_team_name == self.away_team:
+        self.player_stats_map['away_team'].update(
+            {'players': player_stats_list})
+      else:
+        # We should never reach here.
+        assert False
 
     return True
+
+  def _ParseMatchMetaData(self, match_stats):
+    """Parse the match_stats and return some general meta-data about the game.
+
+    The list contains the following entries:
+      0. WhoScored home team id.
+      1. WhoScored away team id.
+      2. Home team name,
+      3. Away team name,
+      4. Date & time match started (mm/dd/yyyy hh:mm:ss)
+      5. Date match started (mm/dd/yyyy 00:00:00)
+      6 - 10. Usless stats as far as I can tell.
+      11. Final score as a string 'Home : Away'
+
+    Args:
+      match_stats: a list containing all the match stats.
+
+    Returns:
+      home_team: the name of the home team.
+      away_team: the name of the away team.
+      home_score: the number of goals scored by the home team.
+      away_score: the number of goals scored by the away team.
+      match_date: the date (utc) when the match was played.
+    """
+    assert len(match_stats) == 12
+    home_score, away_score = common.UnicodeToString(
+        match_stats[11]).split(' : ')
+
+    return (common.UnicodeToString(match_stats[2]),
+            common.UnicodeToString(match_stats[3]), home_score, away_score,
+            datetime.datetime.strptime(match_stats[4], '%m/%d/%Y %H:%M:%S'))
 
   def _NormalizeHTMLData(self, html_data):
     """Parses & cleans up the html data so that it can be desearlized.
@@ -116,43 +212,32 @@ class PlayerDataParser(object):
       team.
 
     Returns:
-      True on success, else False.
+      team_name: the whoscored team_name.
+      player_stats_list: a list of player stats dicts.
+
+    Raises:
+      InvalidPlayerStatsException: if the length of the json list per player
+      is not equal to LENGTH_PLAYER_STATS_LIST.
     """
-    team_id = stats[0]
     team_name = stats[1]
+    player_stats_list = []
 
     for player_stats in stats[4]:
-      # All stats should have 13 entries. No more, no less.
-      if len(player_stats) != 13:
-        logging.error('Invalid player stats list. Should have 13 entries, '
-                      'acutally seen: %d. Stats: %s', len(player_stats),
-                      player_stats)
-        return False
+      # All stats should have LENGTH_PLAYER_STATS_LIST entries.
+      if len(player_stats) != LENGTH_PLAYER_STATS_LIST:
+        raise InvalidPlayerStatsException(
+            "Length of player stats: %d, expected: %d. List contents: %s" %
+            (len(player_stats), LENGTH_PLAYER_STATS_LIST, player_stats))
 
-      self.player_stats_map.update(
-          self._ParsePlayerStats(player_stats, team_id, team_name))
+      player_stats_list.append(
+          self._ParsePlayerStats(player_stats, team_name))
 
     logging.debug('Number of player stats parsed: %d',
-                  len(self.player_stats_map))
-    return True
+                  len(player_stats_list))
+    return team_name, player_stats_list
 
-  def _ToAscii(self, value):
-    """Coverts a unicode value into a string.
-
-    Args:
-      value: the unicode string.
-
-    Returns:
-      an ascii string.
-    """
-    if isinstance(value, unicode):
-      return unicodedata.normalize('NFKD', value).encode('ascii','ignore')
-    else:
-      return str(value)
-
-
-  def _ParsePlayerStats(self, player_stats, team_id, team_name):
-    """Creates a dictionary of all the stats for a given player.
+  def _ParsePlayerStats(self, player_stats, team_name):
+    """Returns a dictionary of all the stats for a given player.
 
     Each player stats list should have only 13 elements.
     0: player id.
@@ -182,42 +267,61 @@ class PlayerDataParser(object):
       ]]
 
     Args:
-      team_id: the id for the team.
       team_name: the name of the team.
       player_stats: a list of lists consisting of stats for a single player.
 
     Returns:
       a dict of the form:
-        { player_id: { 'stat':'value', 'stat':'value'...}}
+        {
+         first_name: <first_name>,
+         last_name: <last_name>,
+         stats: {'stat':'value', 'stat':'value'...}
+        }
     """
-    # Ensure that we haven't already parsed this player id.
-    assert player_stats[0] not in self.player_stats_map
+    # Create a dict out of the player_stats list so that we can access it
+    # faster. Each element in the list containts 2 futher elements:
+    # 0. the key
+    # 1. a list containing a single element, the value.
+    whoscored_stats = dict(
+        (common.UnicodeToString(key), common.UnicodeToString(val[0]))
+        for key, val in player_stats[3][0])
 
-    # For players who didn't get to play at all, there won't be any key called
-    # 'mins_played'. Lets set this to some default value along with some other
-    # defaults.
-    player_dict = {
-        'team_id': int(team_id),
-        'team_name': team_name,
-        'player_id': int(player_stats[0]),
-        'player_name': self._ToAscii(player_stats[1]),
-        'shirt_number': int(player_stats[4]),
-        'starting_position': player_stats[5],
-        'mins_played': int(0),
-        'position': player_stats[9],
-    }
+    # Initialize all the required keys in the parsed_stats.
+    parsed_stats = self._InitializePerPlayerStatsMap()
 
-    # Convert all the lists of lists into key/vals that can be entered into the
-    # player_dict.
-    # Note: a presumption is being made that all the values, which
-    # are represented as lists themselves have only a sinlge element.
-    player_dict.update(
-        dict((self._ToAscii(key), self._ToAscii(value[0]))
-            for key, value in player_stats[3][0]))
+   # Iterate over all the stats in the parsed_stats & set the values based on
+    # common.PLAYER_STATS_MAPPING.
+    for stat in parsed_stats:
+      stats_set = common.PLAYER_STATS_MAPPING.get(stat, None)
+      assert stats_set
 
-    # If the players position is set to 'sub' lets revert it back to all the
-    # possible positions he can play.
-    if player_dict['position'].lower() == 'sub':
-      player_dict['position'] = player_stats[9]
+      # Iterate over all the elements in the stats_set and update the
+      # parsed_stats with the required (summation) of all the stats.
+      for ele in stats_set:
+        if ele in whoscored_stats:
+          parsed_stats[stat] += int(whoscored_stats[ele])
 
-    return {player_stats[0]: player_dict}
+    # TODO(alal): fix these gotchas.
+    # direct red = red_card & no second_yellow
+    # shots_on_target = the actual goal + ontarget_scoring_att
+
+    # Player name.
+    player_name = player_stats[1].split(' ')
+    first_name = common.UnicodeToString(player_name[0])
+    last_name = ''
+    if len(player_name) > 1:
+      last_name = common.UnicodeToString(' '.join(player_name[1:]))
+
+    # Update the parsed_stats with the Whoscored rating.
+    # parsed_stats['who_scored_rating'] = float(whoscored_stats['rating'])
+
+    return {'first_name': first_name, 'last_name': last_name,
+            'stats': parsed_stats}
+
+  def _InitializePerPlayerStatsMap(self):
+    """Initializes a map with the required player stats with defauls as 0.
+
+    Returns:
+      player_stats: an initialized dictionary instance.
+    """
+    return dict((ele, 0) for ele in common.PLAYER_STATS_MAPPING)
