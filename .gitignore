@@ -39,3 +39,6 @@ Thumbs.db
 
 # Temporary files from vim
 .*.swp
+
+# local gem installs
+vendor/cache
